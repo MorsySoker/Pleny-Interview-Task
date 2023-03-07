@@ -41,6 +41,7 @@
 		1D9FC13B29B7D3C1007610F8 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */; };
 		1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13C29B7D559007610F8 /* AuthModel.swift */; };
 		1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13E29B7D5D8007610F8 /* AuthService.swift */; };
+		1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC14129B7D736007610F8 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		1D9FC13C29B7D559007610F8 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		1D9FC13E29B7D5D8007610F8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1D9FC14129B7D736007610F8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		1D9FC07929B7C8EA007610F8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1D9FC14029B7D726007610F8 /* View Model */,
 				1D9FC13629B7D315007610F8 /* Model */,
 				1D9FC07A29B7C8F0007610F8 /* View */,
 			);
@@ -295,6 +298,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		1D9FC14029B7D726007610F8 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D9FC14129B7D736007610F8 /* LoginViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +387,7 @@
 				1D9FC0E729B7C9E6007610F8 /* Requestable.swift in Sources */,
 				1D9FC0D929B7C9E6007610F8 /* BaseNavigationView.swift in Sources */,
 				1D9FC0E229B7C9E6007610F8 /* UIApplication+Extensions.swift in Sources */,
+				1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */,
 				1D9FC0F029B7C9E6007610F8 /* NetworkMonitor.swift in Sources */,
 				1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */,
 				1D9FC0DA29B7C9E6007610F8 /* BaseView.swift in Sources */,
