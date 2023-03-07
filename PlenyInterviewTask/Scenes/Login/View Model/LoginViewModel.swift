@@ -10,7 +10,7 @@ import Foundation
 final class LoginViewModel: BaseObservableViewModel {
     
     @Published var user: UserModel?
-    @Published var auth: AuthModel = AuthModel(userName: "hbingley1", password: "CQutx25i8r")
+    @Published var auth: AuthModel = AuthModel(userName: "hb", password: "CQutx25i8r")
     
     private let authService: AuthServiceProtocol
     
