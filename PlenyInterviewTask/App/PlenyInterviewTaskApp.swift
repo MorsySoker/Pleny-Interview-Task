@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-
+#warning("Don't Forgot to switch off Dark mode")
 @main
 struct PlenyInterviewTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
