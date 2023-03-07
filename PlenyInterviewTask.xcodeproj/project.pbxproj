@@ -40,6 +40,7 @@
 		1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13729B7D32C007610F8 /* LoginModel.swift */; };
 		1D9FC13B29B7D3C1007610F8 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */; };
 		1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13C29B7D559007610F8 /* AuthModel.swift */; };
+		1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13E29B7D5D8007610F8 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		1D9FC13729B7D32C007610F8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		1D9FC13C29B7D559007610F8 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		1D9FC13E29B7D5D8007610F8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			children = (
 				1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */,
 				1D9FC13C29B7D559007610F8 /* AuthModel.swift */,
+				1D9FC13E29B7D5D8007610F8 /* AuthService.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				1D9FC0F029B7C9E6007610F8 /* NetworkMonitor.swift in Sources */,
 				1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */,
 				1D9FC0DA29B7C9E6007610F8 /* BaseView.swift in Sources */,
+				1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */,
 				1D9FC0EB29B7C9E6007610F8 /* BaseResponce.swift in Sources */,
 				1D9FC0E129B7C9E6007610F8 /* UIDevice+Extensions.swift in Sources */,
 				1D9FC0EC29B7C9E6007610F8 /* Enviroment.swift in Sources */,
