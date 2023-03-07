@@ -34,15 +34,9 @@
 		1D9FC0F129B7C9E6007610F8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC09D29B7C9E5007610F8 /* Endpoint.swift */; };
 		1D9FC11E29B7CAE1007610F8 /* BaseBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC11D29B7CAE1007610F8 /* BaseBackgroundView.swift */; };
 		1D9FC12029B7CBF1007610F8 /* View+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC11F29B7CBF1007610F8 /* View+NavigationBar.swift */; };
-		1D9FC12C29B7CCFB007610F8 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12329B7CCFA007610F8 /* SFPRODISPLAYBLACKITALIC.OTF */; };
 		1D9FC12D29B7CCFB007610F8 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12429B7CCFA007610F8 /* SFPRODISPLAYMEDIUM.OTF */; };
-		1D9FC12E29B7CCFB007610F8 /* SFPRODISPLAYTHINITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12529B7CCFA007610F8 /* SFPRODISPLAYTHINITALIC.OTF */; };
 		1D9FC12F29B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12629B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF */; };
-		1D9FC13029B7CCFB007610F8 /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12729B7CCFB007610F8 /* SFPRODISPLAYLIGHTITALIC.OTF */; };
-		1D9FC13129B7CCFB007610F8 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12829B7CCFB007610F8 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */; };
 		1D9FC13229B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12929B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF */; };
-		1D9FC13329B7CCFB007610F8 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12A29B7CCFB007610F8 /* SFPRODISPLAYHEAVYITALIC.OTF */; };
-		1D9FC13429B7CCFB007610F8 /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12B29B7CCFB007610F8 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,15 +68,10 @@
 		1D9FC09D29B7C9E5007610F8 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1D9FC11D29B7CAE1007610F8 /* BaseBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBackgroundView.swift; sourceTree = "<group>"; };
 		1D9FC11F29B7CBF1007610F8 /* View+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationBar.swift"; sourceTree = "<group>"; };
-		1D9FC12329B7CCFA007610F8 /* SFPRODISPLAYBLACKITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBLACKITALIC.OTF; sourceTree = "<group>"; };
 		1D9FC12429B7CCFA007610F8 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
-		1D9FC12529B7CCFA007610F8 /* SFPRODISPLAYTHINITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYTHINITALIC.OTF; sourceTree = "<group>"; };
 		1D9FC12629B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
-		1D9FC12729B7CCFB007610F8 /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYLIGHTITALIC.OTF; sourceTree = "<group>"; };
-		1D9FC12829B7CCFB007610F8 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYSEMIBOLDITALIC.OTF; sourceTree = "<group>"; };
 		1D9FC12929B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
-		1D9FC12A29B7CCFB007610F8 /* SFPRODISPLAYHEAVYITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYHEAVYITALIC.OTF; sourceTree = "<group>"; };
-		1D9FC12B29B7CCFB007610F8 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
+		1D9FC13529B7CDEC007610F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +104,7 @@
 		1D9FC06829B7C277007610F8 /* PlenyInterviewTask */ = {
 			isa = PBXGroup;
 			children = (
+				1D9FC13529B7CDEC007610F8 /* Info.plist */,
 				1D9FC07729B7C841007610F8 /* App */,
 				1D9FC07829B7C8DD007610F8 /* Scenes */,
 				1D9FC11A29B7CAAE007610F8 /* View Components */,
@@ -270,15 +260,9 @@
 		1D9FC12229B7CC6C007610F8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				1D9FC12329B7CCFA007610F8 /* SFPRODISPLAYBLACKITALIC.OTF */,
 				1D9FC12629B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF */,
-				1D9FC12A29B7CCFB007610F8 /* SFPRODISPLAYHEAVYITALIC.OTF */,
-				1D9FC12729B7CCFB007610F8 /* SFPRODISPLAYLIGHTITALIC.OTF */,
 				1D9FC12429B7CCFA007610F8 /* SFPRODISPLAYMEDIUM.OTF */,
 				1D9FC12929B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF */,
-				1D9FC12829B7CCFB007610F8 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */,
-				1D9FC12529B7CCFA007610F8 /* SFPRODISPLAYTHINITALIC.OTF */,
-				1D9FC12B29B7CCFB007610F8 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -342,16 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D9FC07129B7C27A007610F8 /* Preview Assets.xcassets in Resources */,
-				1D9FC12C29B7CCFB007610F8 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */,
-				1D9FC13129B7CCFB007610F8 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */,
 				1D9FC12D29B7CCFB007610F8 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				1D9FC13229B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF in Resources */,
-				1D9FC13329B7CCFB007610F8 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */,
-				1D9FC13429B7CCFB007610F8 /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */,
 				1D9FC06E29B7C27A007610F8 /* Assets.xcassets in Resources */,
-				1D9FC13029B7CCFB007610F8 /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */,
 				1D9FC12F29B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF in Resources */,
-				1D9FC12E29B7CCFB007610F8 /* SFPRODISPLAYTHINITALIC.OTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,11 +496,15 @@
 				DEVELOPMENT_TEAM = V76XYJW56A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlenyInterviewTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pleny;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,9 +512,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = task.com.app.PlenyInterviewTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,11 +532,15 @@
 				DEVELOPMENT_TEAM = V76XYJW56A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlenyInterviewTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pleny;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,9 +548,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = task.com.app.PlenyInterviewTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
