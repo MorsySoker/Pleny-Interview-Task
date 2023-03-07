@@ -37,6 +37,8 @@
 		1D9FC12D29B7CCFB007610F8 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12429B7CCFA007610F8 /* SFPRODISPLAYMEDIUM.OTF */; };
 		1D9FC12F29B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12629B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF */; };
 		1D9FC13229B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC12929B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF */; };
+		1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13729B7D32C007610F8 /* LoginModel.swift */; };
+		1D9FC13B29B7D3C1007610F8 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		1D9FC12629B7CCFB007610F8 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
 		1D9FC12929B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
 		1D9FC13529B7CDEC007610F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D9FC13729B7D32C007610F8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		1D9FC07929B7C8EA007610F8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1D9FC13629B7D315007610F8 /* Model */,
 				1D9FC07A29B7C8F0007610F8 /* View */,
 			);
 			path = Login;
@@ -237,6 +242,7 @@
 		1D9FC09E29B7C9E5007610F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1D9FC13929B7D370007610F8 /* Auth */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -265,6 +271,22 @@
 				1D9FC12929B7CCFB007610F8 /* SFPRODISPLAYREGULAR.OTF */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1D9FC13629B7D315007610F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D9FC13729B7D32C007610F8 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D9FC13929B7D370007610F8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1D9FC13A29B7D3C1007610F8 /* AuthEndpoint.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,10 +383,12 @@
 				1D9FC07C29B7C910007610F8 /* LoginView.swift in Sources */,
 				1D9FC0E329B7C9E6007610F8 /* Color+Apperance.swift in Sources */,
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
+				1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */,
 				1D9FC06A29B7C277007610F8 /* PlenyInterviewTaskApp.swift in Sources */,
 				1D9FC0E429B7C9E6007610F8 /* String+Extension.swift in Sources */,
 				1D9FC0DE29B7C9E6007610F8 /* Date+Extension.swift in Sources */,
 				1D9FC0EE29B7C9E6007610F8 /* NetworkRequest.swift in Sources */,
+				1D9FC13B29B7D3C1007610F8 /* AuthEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
