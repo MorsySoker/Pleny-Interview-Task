@@ -10,7 +10,7 @@ import Foundation
 enum AuthEndpoint: RequestEndpoint {
 
     
-case authenticate(userName: String, password: String)
+case authenticate(authModel: AuthModel)
     
     var parameters: Parameters? {
         nil
@@ -25,9 +25,9 @@ case authenticate(userName: String, password: String)
     
     var requestBody: Any? {
         switch self {
-        case .authenticate(let userName, let password):
-            return ["": userName,
-                    "" : password]
+        case .authenticate(let authModel):
+            return ["username": authModel.userName,
+                    "password" : authModel.password]
         }
     }
     
