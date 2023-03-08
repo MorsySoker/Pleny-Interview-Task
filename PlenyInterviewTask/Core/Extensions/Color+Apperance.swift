@@ -11,4 +11,5 @@ import SwiftUI
 extension Color {
     
     static let appBlue = Color("appBlue")
+    static let textColor = Color("textColor")
 }

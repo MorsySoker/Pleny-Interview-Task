@@ -31,6 +31,11 @@ struct LoginView: View {
         VStack(alignment: .leading, spacing: 24) {
             poster
             welcome
+            VStack(alignment: .leading, spacing: 24) {
+                FieldSection(sectionTitle: "User Name", text: $viewModel.auth.userName)
+                FieldSection(sectionTitle: "Password", text: $viewModel.auth.password)
+            }
+            .padding(.horizontal, 16)
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .ignoresSafeArea()
@@ -51,5 +56,22 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+    }
+}
+
+
+struct FieldSection: View {
+    var sectionTitle: String
+    @Binding var text: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(sectionTitle)
+                .foregroundColor(.textColor)
+                .font(.sfSemiBold(of: 15))
+            
+            TextField(text: $text) {
+                Color.red
+            }
+        }
     }
 }
