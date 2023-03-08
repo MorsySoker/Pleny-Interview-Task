@@ -69,9 +69,7 @@ struct FieldSection: View {
                 .foregroundColor(.textColor)
                 .font(.sfSemiBold(of: 15))
             
-            TextField(text: $text) {
-                Color.red
-            }
+            TextField(text: $, axis: <#T##Axis#>, label: <#T##() -> View#>)
         }
     }
 }
