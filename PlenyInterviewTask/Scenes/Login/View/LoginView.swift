@@ -32,8 +32,14 @@ struct LoginView: View {
             poster
             welcome
             VStack(alignment: .leading, spacing: 24) {
-                FieldSection(sectionTitle: "User Name", text: $viewModel.auth.userName)
-                FieldSection(sectionTitle: "Password", text: $viewModel.auth.password)
+                FieldSection(sectionTitle: "User Name",
+                             placerHolder: "Enter your user name",
+                             inputType: .username,
+                             text: $viewModel.auth.userName)
+                FieldSection(sectionTitle: "Password",
+                             placerHolder: "Enter your password",
+                             inputType: .password,
+                             text: $viewModel.auth.password)
             }
             .padding(.horizontal, 16)
         }
@@ -62,6 +68,8 @@ struct LoginView_Previews: PreviewProvider {
 
 struct FieldSection: View {
     var sectionTitle: String
+    var placerHolder: String
+    var inputType: UITextContentType
     @Binding var text: String
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -69,7 +77,11 @@ struct FieldSection: View {
                 .foregroundColor(.textColor)
                 .font(.sfSemiBold(of: 15))
             
-            TextField(text: $, axis: <#T##Axis#>, label: <#T##() -> View#>)
+            TextFieldView($text,
+                          placeholder: placerHolder,
+                          inputType: inputType,
+                          hasShadow: false,
+                          hasBoarder: true)
         }
     }
 }

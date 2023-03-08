@@ -45,6 +45,8 @@
 		1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13C29B7D559007610F8 /* AuthModel.swift */; };
 		1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13E29B7D5D8007610F8 /* AuthService.swift */; };
 		1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC14129B7D736007610F8 /* LoginViewModel.swift */; };
+		1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */; };
+		1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		1D9FC13C29B7D559007610F8 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		1D9FC13E29B7D5D8007610F8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1D9FC14129B7D736007610F8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,7 @@
 		1D9FC11A29B7CAAE007610F8 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				1DB6FEAC29B90282001C1CE2 /* TextFieldComponent */,
 				1D9FC11D29B7CAE1007610F8 /* BaseBackgroundView.swift */,
 			);
 			path = "View Components";
@@ -313,6 +318,15 @@
 				1D9FC14129B7D736007610F8 /* LoginViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1DB6FEAC29B90282001C1CE2 /* TextFieldComponent */ = {
+			isa = PBXGroup;
+			children = (
+				1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */,
+				1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */,
+			);
+			path = TextFieldComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +414,7 @@
 				1D9FC0D929B7C9E6007610F8 /* BaseNavigationView.swift in Sources */,
 				1D9FC0E229B7C9E6007610F8 /* UIApplication+Extensions.swift in Sources */,
 				1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */,
+				1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */,
 				1D9FC0F029B7C9E6007610F8 /* NetworkMonitor.swift in Sources */,
 				1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */,
 				1D9FC0DA29B7C9E6007610F8 /* BaseView.swift in Sources */,
@@ -414,6 +429,7 @@
 				1D9FC11E29B7CAE1007610F8 /* BaseBackgroundView.swift in Sources */,
 				1D9FC07C29B7C910007610F8 /* LoginView.swift in Sources */,
 				1D9FC0E329B7C9E6007610F8 /* Color+Apperance.swift in Sources */,
+				1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */,
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
 				1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */,
 				1D9FC06A29B7C277007610F8 /* PlenyInterviewTaskApp.swift in Sources */,
