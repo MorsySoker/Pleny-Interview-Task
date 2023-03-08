@@ -9,15 +9,19 @@ import SwiftUI
 
 extension Font {
     
-    static func sfMedium(of size: CGFloat) -> Self {
-        Font.custom("SFPRODISPLAYMEDIUM", size: size)
+    static func sfBold(of size: CGFloat) -> Self {
+        Font.custom("SFProDisplay-Bold", size: size)
     }
     
-    static func sfBold(of size: CGFloat) -> Self {
-        Font.custom("SFPRODISPLAYBOLD", size: size)
+    static func sfSemiBold(of size: CGFloat) -> Self {
+        Font.custom("SFProDisplay-Semibold", size: size)
+    }
+    
+    static func sfMedium(of size: CGFloat) -> Self {
+        Font.custom("SFProDisplay-Medium", size: size)
     }
     
     static func sfRegular(of size: CGFloat) -> Self {
-        Font.custom("SFPRODISPLAYREGULAR", size: size)
+        Font.custom("SFProDisplay-Regular", size: size)
     }
 }

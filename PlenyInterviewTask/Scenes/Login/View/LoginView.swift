@@ -11,6 +11,13 @@ struct LoginView: View {
     @StateObject private var viewModel: LoginViewModel
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            .font(.sfBold(of: 40))
+            .onAppear {
+                for family in UIFont.familyNames.sorted() {
+                    let names = UIFont.fontNames(forFamilyName: family)
+                    print("Family: \(family) Font names: \(names)")
+                }
+            }
     }
     
     init(requestable: Requestable = NetworkRequestable()) {
