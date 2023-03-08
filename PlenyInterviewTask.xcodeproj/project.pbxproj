@@ -51,6 +51,7 @@
 		1DB6FEB829B908C1001C1CE2 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEB729B908C1001C1CE2 /* LoadingIndicator.swift */; };
 		1DB6FEBB29B9190B001C1CE2 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEBA29B9190A001C1CE2 /* LoginFormView.swift */; };
 		1DB6FEBD29B91930001C1CE2 /* FieldSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEBC29B91930001C1CE2 /* FieldSection.swift */; };
+		1DB6FEC329B91EF1001C1CE2 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		1DB6FEB729B908C1001C1CE2 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		1DB6FEBA29B9190A001C1CE2 /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		1DB6FEBC29B91930001C1CE2 /* FieldSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSection.swift; sourceTree = "<group>"; };
+		1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		1D9FC07829B7C8DD007610F8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1DB6FEBE29B91EA3001C1CE2 /* Tabbar */,
 				1D9FC07929B7C8EA007610F8 /* Login */,
 			);
 			path = Scenes;
@@ -349,6 +352,38 @@
 			path = "Sub Views";
 			sourceTree = "<group>";
 		};
+		1DB6FEBE29B91EA3001C1CE2 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				1DB6FEC129B91EC0001C1CE2 /* View Model */,
+				1DB6FEC029B91EB9001C1CE2 /* Model */,
+				1DB6FEBF29B91EB3001C1CE2 /* View */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		1DB6FEBF29B91EB3001C1CE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DB6FEC029B91EB9001C1CE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DB6FEC129B91EC0001C1CE2 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +465,7 @@
 				1D9FC0DD29B7C9E6007610F8 /* Binding+Extensions.swift in Sources */,
 				1D9FC0DC29B7C9E6007610F8 /* Regex+Extensions.swift in Sources */,
 				1D9FC12029B7CBF1007610F8 /* View+NavigationBar.swift in Sources */,
+				1DB6FEC329B91EF1001C1CE2 /* Tabs.swift in Sources */,
 				1D9FC0E729B7C9E6007610F8 /* Requestable.swift in Sources */,
 				1D9FC0D929B7C9E6007610F8 /* BaseNavigationView.swift in Sources */,
 				1D9FC0E229B7C9E6007610F8 /* UIApplication+Extensions.swift in Sources */,
