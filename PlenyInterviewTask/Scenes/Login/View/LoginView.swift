@@ -31,17 +31,8 @@ struct LoginView: View {
         VStack(alignment: .leading, spacing: 24) {
             poster
             welcome
-            VStack(alignment: .leading, spacing: 24) {
-                FieldSection(sectionTitle: "User Name",
-                             placerHolder: "Enter your user name",
-                             inputType: .username,
-                             text: $viewModel.auth.userName)
-                FieldSection(sectionTitle: "Password",
-                             placerHolder: "Enter your password",
-                             inputType: .password,
-                             text: $viewModel.auth.password)
-            }
-            .padding(.horizontal, 16)
+
+            LoginFormView(viewModel: viewModel)
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .ignoresSafeArea()
@@ -62,6 +53,33 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+    }
+}
+
+struct LoginFormView: View {
+    
+    @ObservedObject var viewModel: LoginViewModel
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 40) {
+            VStack(alignment: .leading, spacing: 24) {
+                FieldSection(sectionTitle: "User Name",
+                             placerHolder: "Enter your user name",
+                             inputType: .username,
+                             text: $viewModel.auth.userName)
+                FieldSection(sectionTitle: "Password",
+                             placerHolder: "Enter your password",
+                             inputType: .password,
+                             text: $viewModel.auth.password)
+            }
+            
+            AppActionButton(isLoading: $viewModel.isLoading,
+                            isEnabled: .constant(true),
+                            text: "Sign in") {
+                
+            }
+        }
+        .padding(.horizontal, 16)
     }
 }
 
