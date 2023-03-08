@@ -28,13 +28,17 @@ struct LoginView: View {
     }
     
     private var content: some View {
-        VStack(alignment: .leading, spacing: 24) {
-            poster
-            welcome
-
-            LoginFormView(viewModel: viewModel)
+        ScrollView(.vertical, showsIndicators: false) {
+            // to animate the fields up when they become focused
+            ScrollViewReader { scrollProxy in
+                VStack(alignment: .leading, spacing: 24) {
+                    poster
+                    welcome
+                    LoginFormView(viewModel: viewModel,
+                                  scrollProxy: scrollProxy)
+                }
+            }
         }
-        .frame(maxHeight: .infinity, alignment: .top)
         .ignoresSafeArea()
     }
     
@@ -42,7 +46,6 @@ struct LoginView: View {
     var body: some View {
         BaseNavigationView { content }
     }
-    
     
     //MARK: - Init
     init(requestable: Requestable = NetworkRequestable()) {
@@ -53,53 +56,5 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-    }
-}
-
-struct LoginFormView: View {
-    
-    @ObservedObject var viewModel: LoginViewModel
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 40) {
-            VStack(alignment: .leading, spacing: 24) {
-                FieldSection(sectionTitle: "User Name",
-                             placerHolder: "Enter your user name",
-                             inputType: .username,
-                             text: $viewModel.auth.userName)
-                FieldSection(sectionTitle: "Password",
-                             placerHolder: "Enter your password",
-                             inputType: .password,
-                             text: $viewModel.auth.password)
-            }
-            
-            AppActionButton(isLoading: $viewModel.isLoading,
-                            isEnabled: .constant(true),
-                            text: "Sign in") {
-                
-            }
-        }
-        .padding(.horizontal, 16)
-    }
-}
-
-
-struct FieldSection: View {
-    var sectionTitle: String
-    var placerHolder: String
-    var inputType: UITextContentType
-    @Binding var text: String
-    var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(sectionTitle)
-                .foregroundColor(.textColor)
-                .font(.sfSemiBold(of: 15))
-            
-            TextFieldView($text,
-                          placeholder: placerHolder,
-                          inputType: inputType,
-                          hasShadow: false,
-                          hasBoarder: true)
-        }
     }
 }

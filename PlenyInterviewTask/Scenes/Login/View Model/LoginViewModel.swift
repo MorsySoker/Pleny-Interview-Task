@@ -9,21 +9,33 @@ import Foundation
 
 final class LoginViewModel: BaseObservableViewModel {
     
+    //MARK: - Properties
     @Published var user: UserModel?
-    @Published var auth: AuthModel = AuthModel(userName: "hb", password: "CQutx25i8r")
+    @Published var auth: AuthModel = AuthModel(userName: "", password: "")
+    @Published var isValidToAuth: Bool = false
     
+    //Services
     private let authService: AuthServiceProtocol
     
+    //MARK: - init
     init(authService: AuthServiceProtocol) {
         self.authService = authService
         super.init()
-        self.authenticate()
+        self.subToValidation()
+    }
+    
+    //MARK: - Methods
+    private func subToValidation() {
+        $auth
+            .map { !$0.userName.isEmpty && !$0.password.isEmpty }
+            .assign(to: &$isValidToAuth)
     }
 }
 
 extension LoginViewModel {
     
     func authenticate() {
+        self.isLoading = true
         authService.auth(with: auth)
             .sink(receiveCompletion: onReceive, receiveValue: onReceive)
             .store(in: &cancellables)
@@ -32,10 +44,11 @@ extension LoginViewModel {
     private func onReceive(_ response: UserModel) {
         guard let id = response.id,
               let token = response.token else {
+            self.isLoading = false
             self.errorMessage = "Wrong username or password"
             return
         }
-        
+        self.isLoading = false
         print("\(id) \(token)")
     }
 }
