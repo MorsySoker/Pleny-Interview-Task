@@ -24,7 +24,7 @@ enum Tab: Int, Identifiable, CaseIterable {
         case .home: return "home"
         case .market: return "market"
         case .offers: return "offers"
-        case .gallary: return "gallary"
+        case .gallary: return "gallery"
         case .profile: return "profile"
         }
     }

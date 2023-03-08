@@ -53,6 +53,7 @@
 		1DB6FEBD29B91930001C1CE2 /* FieldSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEBC29B91930001C1CE2 /* FieldSection.swift */; };
 		1DB6FEC329B91EF1001C1CE2 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */; };
 		1DB6FEC529B921E2001C1CE2 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC429B921E2001C1CE2 /* TabView.swift */; };
+		1DB6FEC729B925BA001C1CE2 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		1DB6FEBC29B91930001C1CE2 /* FieldSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSection.swift; sourceTree = "<group>"; };
 		1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		1DB6FEC429B921E2001C1CE2 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				1DB6FEC429B921E2001C1CE2 /* TabView.swift */,
+				1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */,
 				1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */,
 				1D9FC0F029B7C9E6007610F8 /* NetworkMonitor.swift in Sources */,
+				1DB6FEC729B925BA001C1CE2 /* TabbarView.swift in Sources */,
 				1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */,
 				1D9FC0DA29B7C9E6007610F8 /* BaseView.swift in Sources */,
 				1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */,
