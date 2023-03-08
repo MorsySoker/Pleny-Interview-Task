@@ -12,13 +12,8 @@ struct BaseNavigationView<Content>: View where Content: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .top) {
-                BaseBackgroundView()
-                
-                content()
-                    .padding(.horizontal, 16)
-            }
-            .hideNavBar()
+            BaseView { content() }
+                .hideNavBar()
         }
         
     }

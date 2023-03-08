@@ -11,6 +11,8 @@
 		1D964AB129B8D147008C1DEE /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB029B8D147008C1DEE /* SF-Pro-Display-Medium.otf */; };
 		1D964AB329B8D20F008C1DEE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB229B8D20F008C1DEE /* SF-Pro-Display-Regular.otf */; };
 		1D964AB529B8D26A008C1DEE /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB429B8D26A008C1DEE /* SF-Pro-Display-Semibold.otf */; };
+		1D964AB729B8D344008C1DEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB629B8D344008C1DEE /* Images.xcassets */; };
+		1D964AB929B8D545008C1DEE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB829B8D545008C1DEE /* Colors.xcassets */; };
 		1D9FC06A29B7C277007610F8 /* PlenyInterviewTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC06929B7C277007610F8 /* PlenyInterviewTaskApp.swift */; };
 		1D9FC06E29B7C27A007610F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC06D29B7C27A007610F8 /* Assets.xcassets */; };
 		1D9FC07129B7C27A007610F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FC07029B7C27A007610F8 /* Preview Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		1D964AB029B8D147008C1DEE /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		1D964AB229B8D20F008C1DEE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		1D964AB429B8D26A008C1DEE /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		1D964AB629B8D344008C1DEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1D964AB829B8D545008C1DEE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1D9FC06629B7C277007610F8 /* PlenyInterviewTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlenyInterviewTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9FC06929B7C277007610F8 /* PlenyInterviewTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyInterviewTaskApp.swift; sourceTree = "<group>"; };
 		1D9FC06D29B7C27A007610F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				1D9FC06D29B7C27A007610F8 /* Assets.xcassets */,
+				1D964AB629B8D344008C1DEE /* Images.xcassets */,
+				1D964AB829B8D545008C1DEE /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -369,8 +375,10 @@
 			files = (
 				1D964AB529B8D26A008C1DEE /* SF-Pro-Display-Semibold.otf in Resources */,
 				1D964AB129B8D147008C1DEE /* SF-Pro-Display-Medium.otf in Resources */,
+				1D964AB729B8D344008C1DEE /* Images.xcassets in Resources */,
 				1D9FC07129B7C27A007610F8 /* Preview Assets.xcassets in Resources */,
 				1D9FC06E29B7C27A007610F8 /* Assets.xcassets in Resources */,
+				1D964AB929B8D545008C1DEE /* Colors.xcassets in Resources */,
 				1D964AB329B8D20F008C1DEE /* SF-Pro-Display-Regular.otf in Resources */,
 				1D964AAF29B8D0CF008C1DEE /* SF-Pro-Display-Bold.otf in Resources */,
 			);

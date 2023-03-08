@@ -8,18 +8,41 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    // MARK: - View States
     @StateObject private var viewModel: LoginViewModel
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .font(.sfBold(of: 40))
-            .onAppear {
-                for family in UIFont.familyNames.sorted() {
-                    let names = UIFont.fontNames(forFamilyName: family)
-                    print("Family: \(family) Font names: \(names)")
-                }
-            }
+    
+    //MARK: - Views
+    
+    private var poster: some View {
+        Image("loginPoster")
+            .resizable()
+            .scaledToFit()
     }
     
+    private var welcome: some View {
+        Text("Welcome")
+            .font(.sfBold(of: 20))
+            .foregroundColor(.appBlue)
+            .frame(maxWidth: .infinity, alignment: .center)
+    }
+    
+    private var content: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            poster
+            welcome
+        }
+        .frame(maxHeight: .infinity, alignment: .top)
+        .ignoresSafeArea()
+    }
+    
+    //MARK: - Body
+    var body: some View {
+        BaseNavigationView { content }
+    }
+    
+    
+    //MARK: - Init
     init(requestable: Requestable = NetworkRequestable()) {
         _viewModel = StateObject(wrappedValue: LoginViewModel(authService: AuthService(networkService: requestable)))
     }

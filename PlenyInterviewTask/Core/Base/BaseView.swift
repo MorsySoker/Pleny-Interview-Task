@@ -15,7 +15,6 @@ struct BaseView<Content>: View where Content: View {
             BaseBackgroundView()
             
             content()
-                .padding(.horizontal, 16)
         }
     }
 }
