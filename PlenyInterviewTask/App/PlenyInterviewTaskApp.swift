@@ -11,7 +11,8 @@ import SwiftUI
 struct PlenyInterviewTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+//            LoginView()
+            TabbarView()
         }
     }
 }

@@ -21,6 +21,7 @@ struct CollapsibleSearchBar: View {
             Button {
                 onPressSearch()
                 collapsed.toggle()
+                isFocused = true
             } label: {
                 Image(systemName: "magnifyingglass")
                     .resizable()
@@ -35,6 +36,7 @@ struct CollapsibleSearchBar: View {
             if !collapsed {
                 TextField("Search", text: $searchText)
                     .foregroundColor(.textColor)
+                    .font(.sfRegular(of: 17))
                     .padding(.vertical, 9)
                     .focused($isFocused, equals: true)
                     .tint(Color.textColor)
@@ -48,7 +50,10 @@ struct CollapsibleSearchBar: View {
                             } label: {
                                 Image(systemName: "xmark.circle")
                                     .foregroundColor(.appDarkGray)
-                                    .font(.sfSemiBold(of: 18))
+                                    .font(.system(size: 20,
+                                                  weight: .semibold,
+                                                  design: .rounded))
+                                
                             }
                         }
                         .padding(.horizontal)
@@ -59,9 +64,11 @@ struct CollapsibleSearchBar: View {
         .frame(maxWidth: .infinity, alignment: .trailing)
         .background {
             RoundedRectangle(cornerRadius: cornerRadius)
-                .stroke(collapsed ? Color.clear : Color.appGrayBoarders, lineWidth: 1)
+                .stroke(collapsed ? Color.clear : Color.appGrayBoarders,
+                        lineWidth: 1)
         }
-        .padding(.trailing, collapsed ? 0 : 13.5)
+        .padding(.trailing, collapsed ? 0 : 16)
+        .padding(.leading, collapsed ? 0 : 8)
         .animation(.easeInOut(duration: 0.35), value: collapsed)
     }
 }

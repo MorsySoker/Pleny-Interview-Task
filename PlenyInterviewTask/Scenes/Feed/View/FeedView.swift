@@ -16,6 +16,14 @@ struct FeedView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             FeedNav(searchText: $searchText)
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                
+            }
+            .onTapGesture {
+                dismissKeyboard()
+            }
+            
         }
         .frame(maxHeight: .infinity, alignment: .top)
     }
