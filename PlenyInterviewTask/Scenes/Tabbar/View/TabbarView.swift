@@ -26,9 +26,7 @@ struct TabbarView: View {
     
     private var tabbar: some View {
         VStack(alignment: .center, spacing: 0) {
-            Rectangle()
-                .fill(Color.appDivider)
-                .frame(height: 1)
+            AppDivider()
             HStack(alignment: .center) {
                 ForEach(Tab.allCases) {
                     TabView(tab: $0, routerTab: $selectedTab)
