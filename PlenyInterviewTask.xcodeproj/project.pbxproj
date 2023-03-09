@@ -45,6 +45,7 @@
 		1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13C29B7D559007610F8 /* AuthModel.swift */; };
 		1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC13E29B7D5D8007610F8 /* AuthService.swift */; };
 		1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC14129B7D736007610F8 /* LoginViewModel.swift */; };
+		1DAA9D1429B994FF00176B5D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D1329B994FF00176B5D /* FeedView.swift */; };
 		1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */; };
 		1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */; };
 		1DB6FEB629B9085D001C1CE2 /* AppActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEB529B9085D001C1CE2 /* AppActionButton.swift */; };
@@ -97,6 +98,7 @@
 		1D9FC13C29B7D559007610F8 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		1D9FC13E29B7D5D8007610F8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1D9FC14129B7D736007610F8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1DAA9D1329B994FF00176B5D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldLabel.swift; sourceTree = "<group>"; };
 		1DB6FEB529B9085D001C1CE2 /* AppActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActionButton.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		1D9FC07829B7C8DD007610F8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1DAA9D1129B994E600176B5D /* Feed */,
 				1DB6FEBE29B91EA3001C1CE2 /* Tabbar */,
 				1D9FC07929B7C8EA007610F8 /* Login */,
 			);
@@ -339,6 +342,22 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		1DAA9D1129B994E600176B5D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				1DAA9D1229B994ED00176B5D /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		1DAA9D1229B994ED00176B5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DAA9D1329B994FF00176B5D /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1DB6FEAC29B90282001C1CE2 /* TextFieldComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DAA9D1429B994FF00176B5D /* FeedView.swift in Sources */,
 				1D9FC0ED29B7C9E6007610F8 /* Base.swift in Sources */,
 				1D9FC0D829B7C9E6007610F8 /* BaseObservableViewModel.swift in Sources */,
 				1D9FC0DD29B7C9E6007610F8 /* Binding+Extensions.swift in Sources */,

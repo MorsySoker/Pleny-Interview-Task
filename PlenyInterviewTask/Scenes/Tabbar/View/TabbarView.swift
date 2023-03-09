@@ -16,7 +16,7 @@ struct TabbarView: View {
     @ViewBuilder
     private var page: some View {
         switch selectedTab {
-        case .feed: Color.appBlue
+        case .feed: FeedView()
         case .offers: Color.green
         case .market: Color.appBlue
         case .gallary: Color.appBlue
