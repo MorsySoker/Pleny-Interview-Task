@@ -17,10 +17,10 @@ struct TabbarView: View {
     private var page: some View {
         switch selectedTab {
         case .feed: FeedView()
-        case .offers: Color.green
-        case .market: Color.appBlue
-        case .gallary: Color.appBlue
-        case .profile: Color.appBlue
+        case .offers: Color.clear
+        case .market: Color.clear
+        case .gallary: Color.clear
+        case .profile: Color.clear
         }
     }
     

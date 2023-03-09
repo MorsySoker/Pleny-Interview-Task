@@ -47,6 +47,8 @@
 		1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC14129B7D736007610F8 /* LoginViewModel.swift */; };
 		1DAA9D1429B994FF00176B5D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D1329B994FF00176B5D /* FeedView.swift */; };
 		1DAA9D1629B9993000176B5D /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D1529B9993000176B5D /* AppDivider.swift */; };
+		1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237229B9CE180093C7B6 /* SearchBar.swift */; };
+		1DB3237629B9D9C40093C7B6 /* FeedNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237529B9D9C40093C7B6 /* FeedNav.swift */; };
 		1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */; };
 		1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */; };
 		1DB6FEB629B9085D001C1CE2 /* AppActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEB529B9085D001C1CE2 /* AppActionButton.swift */; };
@@ -101,6 +103,8 @@
 		1D9FC14129B7D736007610F8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1DAA9D1329B994FF00176B5D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		1DAA9D1529B9993000176B5D /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
+		1DB3237229B9CE180093C7B6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		1DB3237529B9D9C40093C7B6 /* FeedNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNav.swift; sourceTree = "<group>"; };
 		1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldLabel.swift; sourceTree = "<group>"; };
 		1DB6FEB529B9085D001C1CE2 /* AppActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActionButton.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				1D9FC11D29B7CAE1007610F8 /* BaseBackgroundView.swift */,
 				1DB6FEBC29B91930001C1CE2 /* FieldSection.swift */,
 				1DAA9D1529B9993000176B5D /* AppDivider.swift */,
+				1DB3237229B9CE180093C7B6 /* SearchBar.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -356,9 +361,18 @@
 		1DAA9D1229B994ED00176B5D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DB3237429B9D9B90093C7B6 /* Sub Views */,
 				1DAA9D1329B994FF00176B5D /* FeedView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1DB3237429B9D9B90093C7B6 /* Sub Views */ = {
+			isa = PBXGroup;
+			children = (
+				1DB3237529B9D9C40093C7B6 /* FeedNav.swift */,
+			);
+			path = "Sub Views";
 			sourceTree = "<group>";
 		};
 		1DB6FEAC29B90282001C1CE2 /* TextFieldComponent */ = {
@@ -497,6 +511,7 @@
 				1DB6FEC329B91EF1001C1CE2 /* Tabs.swift in Sources */,
 				1D9FC0E729B7C9E6007610F8 /* Requestable.swift in Sources */,
 				1D9FC0D929B7C9E6007610F8 /* BaseNavigationView.swift in Sources */,
+				1DB3237629B9D9C40093C7B6 /* FeedNav.swift in Sources */,
 				1D9FC0E229B7C9E6007610F8 /* UIApplication+Extensions.swift in Sources */,
 				1D9FC14229B7D736007610F8 /* LoginViewModel.swift in Sources */,
 				1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */,
@@ -523,6 +538,7 @@
 				1D9FC0E329B7C9E6007610F8 /* Color+Apperance.swift in Sources */,
 				1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */,
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
+				1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */,
 				1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */,
 				1D9FC06A29B7C277007610F8 /* PlenyInterviewTaskApp.swift in Sources */,
 				1D9FC0E429B7C9E6007610F8 /* String+Extension.swift in Sources */,
