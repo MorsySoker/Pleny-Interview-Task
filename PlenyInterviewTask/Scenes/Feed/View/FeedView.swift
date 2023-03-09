@@ -60,9 +60,9 @@ struct FeedNav: View {
             } else {
                 SearchBar(searchText: $searchText,
                           onCancel: { showSearchBar = false })
-                    .padding(.horizontal, 12)
+                .padding(.horizontal, 12)
             }
-
+            
         }
         .frame(height: 44)
         .padding(.vertical, 12)
@@ -94,25 +94,24 @@ struct SearchBar: View {
                     .foregroundColor(.primary)
                     .padding(.vertical)
                     .focused($isFocused, equals: true)
-                    
+                
             }
             .background {
-                        RoundedRectangle(cornerRadius: cornerRadius)
-                            .stroke(Color.appGrayBoarders, lineWidth: 1)
-                    
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(Color.appGrayBoarders, lineWidth: 1)
             }
             .overlay {
-                    HStack {
-                        Spacer()
-                        Button {
-                            searchText = ""
-                            onCancel()
-                        } label: {
-                            Image(systemName: "xmark.circle")
-                                .foregroundColor(.red)
-                        }
+                HStack {
+                    Spacer()
+                    Button {
+                        searchText = ""
+                        onCancel()
+                    } label: {
+                        Image(systemName: "xmark.circle")
+                            .foregroundColor(.red)
                     }
-                    .padding(.horizontal)
+                }
+                .padding(.horizontal)
                 
             }
         }
