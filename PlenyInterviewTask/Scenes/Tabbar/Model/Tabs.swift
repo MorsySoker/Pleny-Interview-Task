@@ -9,7 +9,7 @@ import Foundation
 
 enum Tab: Int, Identifiable, CaseIterable {
     
-    case home
+    case feed
     case market
     case offers
     case gallary
@@ -21,7 +21,7 @@ enum Tab: Int, Identifiable, CaseIterable {
     
     var icon: String {
         switch self {
-        case .home: return "home"
+        case .feed: return "home"
         case .market: return "market"
         case .offers: return "offers"
         case .gallary: return "gallery"

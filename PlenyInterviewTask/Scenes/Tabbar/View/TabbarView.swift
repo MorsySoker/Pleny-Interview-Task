@@ -10,13 +10,13 @@ import SwiftUI
 struct TabbarView: View {
     
     //MARK: - View States
-    @State private var selectedTab: Tab = .home
+    @State private var selectedTab: Tab = .feed
     
     //MARK: - Views
     @ViewBuilder
-    private var router: some View {
+    private var page: some View {
         switch selectedTab {
-        case .home: Color.appBlue
+        case .feed: Color.appBlue
         case .offers: Color.green
         case .market: Color.appBlue
         case .gallary: Color.appBlue
@@ -42,7 +42,7 @@ struct TabbarView: View {
     
     private var content: some View {
         VStack(alignment: .center, spacing: 0) {
-            router
+            page
             tabbar
         }
     }
