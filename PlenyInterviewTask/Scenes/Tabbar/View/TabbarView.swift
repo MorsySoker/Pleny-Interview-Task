@@ -13,6 +13,16 @@ struct TabbarView: View {
     @State private var selectedTab: Tab = .home
     
     //MARK: - Views
+    @ViewBuilder
+    private var router: some View {
+        switch selectedTab {
+        case .home: Color.appBlue
+        case .offers: Color.green
+        case .market: Color.appBlue
+        case .gallary: Color.appBlue
+        case .profile: Color.appBlue
+        }
+    }
     
     private var tabbar: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -27,15 +37,17 @@ struct TabbarView: View {
             }
             
         }
-        .frame(maxHeight: .infinity, alignment: .bottom)
+        .frame(height: 56, alignment: .bottom)
     }
     
     private var content: some View {
-        VStack(alignment: .center, spacing: 1) {
+        VStack(alignment: .center, spacing: 0) {
+            router
             tabbar
         }
     }
     
+    //MARK: - Body
     var body: some View {
         content
     }
