@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol AuthServiceProtocol: RequestService {
-    func auth(with credentials: AuthModel) -> AnyPublisher<UserModel, NetworkError>
+    func auth(with credentials: AuthModel) -> AnyPublisher<LoggedUser, NetworkError>
 }
 
 final class AuthService: AuthServiceProtocol {
@@ -22,7 +22,7 @@ final class AuthService: AuthServiceProtocol {
         self.networkService = networkService
     }
     
-    func auth(with credentials: AuthModel) -> AnyPublisher<UserModel, NetworkError> {
+    func auth(with credentials: AuthModel) -> AnyPublisher<LoggedUser, NetworkError> {
         fetchEndpoint = AuthEndpoint.authenticate(authModel: credentials)
         let request = fetchEndpoint!.createRequest()
         return networkService!.fetchRequest(request)

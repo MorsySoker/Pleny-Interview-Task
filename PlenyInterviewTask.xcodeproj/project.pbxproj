@@ -50,6 +50,10 @@
 		1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237229B9CE180093C7B6 /* SearchBar.swift */; };
 		1DB3237629B9D9C40093C7B6 /* FeedNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237529B9D9C40093C7B6 /* FeedNav.swift */; };
 		1DB3237B29B9EA8F0093C7B6 /* View+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237A29B9EA8F0093C7B6 /* View+Keyboard.swift */; };
+		1DB3237E29B9EF8E0093C7B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237D29B9EF8E0093C7B6 /* User.swift */; };
+		1DB3238029B9F1850093C7B6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237F29B9F1850093C7B6 /* Post.swift */; };
+		1DB3238229B9F3790093C7B6 /* PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3238129B9F3790093C7B6 /* PostType.swift */; };
+		1DB3238429B9F5E20093C7B6 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3238329B9F5E20093C7B6 /* Feed.swift */; };
 		1DB6FEB029B90282001C1CE2 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */; };
 		1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */; };
 		1DB6FEB629B9085D001C1CE2 /* AppActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEB529B9085D001C1CE2 /* AppActionButton.swift */; };
@@ -107,6 +111,10 @@
 		1DB3237229B9CE180093C7B6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		1DB3237529B9D9C40093C7B6 /* FeedNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNav.swift; sourceTree = "<group>"; };
 		1DB3237A29B9EA8F0093C7B6 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Keyboard.swift"; sourceTree = "<group>"; };
+		1DB3237D29B9EF8E0093C7B6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1DB3237F29B9F1850093C7B6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1DB3238129B9F3790093C7B6 /* PostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostType.swift; sourceTree = "<group>"; };
+		1DB3238329B9F5E20093C7B6 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		1DB6FEAD29B90282001C1CE2 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		1DB6FEAE29B90282001C1CE2 /* TextFieldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldLabel.swift; sourceTree = "<group>"; };
 		1DB6FEB529B9085D001C1CE2 /* AppActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppActionButton.swift; sourceTree = "<group>"; };
@@ -356,6 +364,7 @@
 		1DAA9D1129B994E600176B5D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				1DB3237C29B9EF790093C7B6 /* Model */,
 				1DAA9D1229B994ED00176B5D /* View */,
 			);
 			path = Feed;
@@ -376,6 +385,17 @@
 				1DB3237529B9D9C40093C7B6 /* FeedNav.swift */,
 			);
 			path = "Sub Views";
+			sourceTree = "<group>";
+		};
+		1DB3237C29B9EF790093C7B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DB3237D29B9EF8E0093C7B6 /* User.swift */,
+				1DB3237F29B9F1850093C7B6 /* Post.swift */,
+				1DB3238129B9F3790093C7B6 /* PostType.swift */,
+				1DB3238329B9F5E20093C7B6 /* Feed.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1DB6FEAC29B90282001C1CE2 /* TextFieldComponent */ = {
@@ -528,7 +548,9 @@
 				1D9FC0E129B7C9E6007610F8 /* UIDevice+Extensions.swift in Sources */,
 				1D9FC0EC29B7C9E6007610F8 /* Enviroment.swift in Sources */,
 				1DB6FEC529B921E2001C1CE2 /* TabView.swift in Sources */,
+				1DB3237E29B9EF8E0093C7B6 /* User.swift in Sources */,
 				1DB6FEBB29B9190B001C1CE2 /* LoginFormView.swift in Sources */,
+				1DB3238429B9F5E20093C7B6 /* Feed.swift in Sources */,
 				1DB6FEBD29B91930001C1CE2 /* FieldSection.swift in Sources */,
 				1DB6FEB629B9085D001C1CE2 /* AppActionButton.swift in Sources */,
 				1D9FC0F129B7C9E6007610F8 /* Endpoint.swift in Sources */,
@@ -539,6 +561,7 @@
 				1DB6FEB829B908C1001C1CE2 /* LoadingIndicator.swift in Sources */,
 				1D9FC11E29B7CAE1007610F8 /* BaseBackgroundView.swift in Sources */,
 				1D9FC07C29B7C910007610F8 /* LoginView.swift in Sources */,
+				1DB3238029B9F1850093C7B6 /* Post.swift in Sources */,
 				1D9FC0E329B7C9E6007610F8 /* Color+Apperance.swift in Sources */,
 				1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */,
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
@@ -546,6 +569,7 @@
 				1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */,
 				1D9FC06A29B7C277007610F8 /* PlenyInterviewTaskApp.swift in Sources */,
 				1D9FC0E429B7C9E6007610F8 /* String+Extension.swift in Sources */,
+				1DB3238229B9F3790093C7B6 /* PostType.swift in Sources */,
 				1D9FC0DE29B7C9E6007610F8 /* Date+Extension.swift in Sources */,
 				1D9FC0EE29B7C9E6007610F8 /* NetworkRequest.swift in Sources */,
 				1D9FC13B29B7D3C1007610F8 /* AuthEndpoint.swift in Sources */,

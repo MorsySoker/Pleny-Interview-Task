@@ -10,7 +10,7 @@ import Foundation
 final class LoginViewModel: BaseObservableViewModel {
     
     //MARK: - Properties
-    @Published var user: UserModel?
+    @Published var user: LoggedUser?
     @Published var auth: AuthModel = AuthModel(userName: "", password: "")
     @Published var isValidToAuth: Bool = false
     
@@ -41,7 +41,7 @@ extension LoginViewModel {
             .store(in: &cancellables)
     }
     
-    private func onReceive(_ response: UserModel) {
+    private func onReceive(_ response: LoggedUser) {
         guard let id = response.id,
               let token = response.token else {
             self.isLoading = false
