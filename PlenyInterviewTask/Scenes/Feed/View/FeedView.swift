@@ -46,6 +46,10 @@ struct FeedView_Previews: PreviewProvider {
         let post2 = Post(id: 2,
                          body: .textWithImages(text, ["foodImage1", "foodImage2"]),
                          sender: User(id: 2, name: "Neama Ahmed", avatar: "femalePic"))
-        FeedView(post: [post1, post2])
+        
+        let post3 = Post(id: 3,
+                         body: .textWithImages(text, ["foodImage4", "foodImage2", "foodImage3"]),
+                         sender: User(id: 2, name: "Neama Ahmed", avatar: "femalePic"))
+        FeedView(post: [post3, post2])
     }
 }

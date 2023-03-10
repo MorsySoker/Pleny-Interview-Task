@@ -74,7 +74,7 @@ struct PostImagesGrid: View {
         switch images.count {
         case 1: oneImage
         case 2: TwoImagesGrid(images: images)
-        case 3: Color.appGrayBoarders
+        case 3: ThreeImageGrid(images: images)
         default: Color.appDarkGray
         }
     }
@@ -96,11 +96,11 @@ struct PostImagesGrid: View {
 struct TwoImagesGrid: View {
     
     let images: [String]
-    var rows: [GridItem] =
+    var columns: [GridItem] =
     Array(repeating: .init(.adaptive(minimum: 170), spacing: 3, alignment: .center), count: 2)
     
     var body: some View {
-        LazyVGrid(columns: rows, alignment: .center, spacing: 3) {
+        LazyVGrid(columns: columns, alignment: .center, spacing: 3) {
             ForEach(images, id: \.self) {
                 Image($0)
                     .resizable()
@@ -109,6 +109,39 @@ struct TwoImagesGrid: View {
             }
         }
         .cornerRadius(8)
+    }
+}
+
+struct ThreeImageGrid: View {
+    
+    let images: [String]
+    let rows: [GridItem] = Array(repeating: .init(.flexible(minimum: 100, maximum: 170),
+                                                  spacing: 20,
+                                                  alignment: .center), count: 2)
+    
+    var body: some View {
+        GeometryReader {
+            let size = $0.size
+            HStack(alignment: .center, spacing: 0) {
+                Image(images.first!)
+                    .scaledToFill()
+                    .frame(width: size.width / 2)
+                    .clipped()
+                    
+                LazyHGrid(rows: rows, alignment: .top, spacing: 3) {
+                    ForEach(images.dropFirst(), id: \.self) { image in
+                        Image(image)
+                            .scaledToFill()
+                            .frame(width: size.width / 2)
+                            .clipped()
+                            
+                    }
+                }
+            }
+            .cornerRadius(8)
+        }
+        .frame(height: 343)
+       
     }
 }
 
