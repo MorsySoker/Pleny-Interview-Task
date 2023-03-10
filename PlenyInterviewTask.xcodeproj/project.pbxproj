@@ -49,6 +49,7 @@
 		1DAA9D1629B9993000176B5D /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D1529B9993000176B5D /* AppDivider.swift */; };
 		1DAA9D1829BB477500176B5D /* PostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D1729BB477500176B5D /* PostHeader.swift */; };
 		1DAA9D1B29BB4E0B00176B5D /* PostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D1A29BB4E0B00176B5D /* PostBody.swift */; };
+		1DAA9D2129BB717A00176B5D /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAA9D2029BB717A00176B5D /* PostView.swift */; };
 		1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237229B9CE180093C7B6 /* SearchBar.swift */; };
 		1DB3237629B9D9C40093C7B6 /* FeedNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237529B9D9C40093C7B6 /* FeedNav.swift */; };
 		1DB3237B29B9EA8F0093C7B6 /* View+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3237A29B9EA8F0093C7B6 /* View+Keyboard.swift */; };
@@ -112,6 +113,7 @@
 		1DAA9D1529B9993000176B5D /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
 		1DAA9D1729BB477500176B5D /* PostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeader.swift; sourceTree = "<group>"; };
 		1DAA9D1A29BB4E0B00176B5D /* PostBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBody.swift; sourceTree = "<group>"; };
+		1DAA9D2029BB717A00176B5D /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		1DB3237229B9CE180093C7B6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		1DB3237529B9D9C40093C7B6 /* FeedNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNav.swift; sourceTree = "<group>"; };
 		1DB3237A29B9EA8F0093C7B6 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Keyboard.swift"; sourceTree = "<group>"; };
@@ -387,10 +389,19 @@
 		1DAA9D1929BB4DEF00176B5D /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				1DAA9D2229BB7A8900176B5D /* Post Body */,
 				1DAA9D1729BB477500176B5D /* PostHeader.swift */,
 				1DAA9D1A29BB4E0B00176B5D /* PostBody.swift */,
+				1DAA9D2029BB717A00176B5D /* PostView.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		1DAA9D2229BB7A8900176B5D /* Post Body */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Post Body";
 			sourceTree = "<group>";
 		};
 		1DB3237429B9D9B90093C7B6 /* Sub Views */ = {
@@ -582,6 +593,7 @@
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
 				1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */,
 				1D9FC13829B7D32C007610F8 /* LoginModel.swift in Sources */,
+				1DAA9D2129BB717A00176B5D /* PostView.swift in Sources */,
 				1D9FC06A29B7C277007610F8 /* PlenyInterviewTaskApp.swift in Sources */,
 				1D9FC0E429B7C9E6007610F8 /* String+Extension.swift in Sources */,
 				1DB3238229B9F3790093C7B6 /* PostType.swift in Sources */,
@@ -717,7 +729,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlenyInterviewTask/Preview Content\"";
-				DEVELOPMENT_TEAM = 2K7WVT9HR2;
+				DEVELOPMENT_TEAM = V76XYJW56A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlenyInterviewTask/Info.plist;
@@ -754,7 +766,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlenyInterviewTask/Preview Content\"";
-				DEVELOPMENT_TEAM = 2K7WVT9HR2;
+				DEVELOPMENT_TEAM = V76XYJW56A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlenyInterviewTask/Info.plist;

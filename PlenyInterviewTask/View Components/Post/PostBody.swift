@@ -16,28 +16,15 @@ struct PostBody: View {
         switch postType {
         case .text(let text):
             TextTypePost(text: text)
+        case .images(let images):
+            ImagesTypePost(images: images)
         case .textWithImages(let text, let images):
             TextWithImagesTypePost(text: text, images: images)
-        default: EmptyView()
         }
     }
     
     var body: some View {
         viewType
-    }
-}
-
-struct PostBody_Previews: PreviewProvider {
-    static var previews: some View {
-        let text = "Craving something delicious? Try our new dish - a savory mix of roasted vegetables and quinoa, topped with a zesty garlic. Yum!"
-        VStack {
-            PostBody(postType: .text(text))
-            
-            AppDivider()
-            
-            PostBody(postType: .textWithImages(text, ["foodImage1"]))
-        }
-        .padding(.horizontal, 16)
     }
 }
 
@@ -48,6 +35,16 @@ struct TextTypePost: View {
             .multilineTextAlignment(.leading)
             .font(.sfRegular(of: 17))
             .foregroundColor(.titleColor)
+    }
+}
+
+struct ImagesTypePost: View {
+    let images: [String]
+    
+    var body: some View {
+        if !images.isEmpty {
+            PostImagesGrid(images: images)
+        }
     }
 }
 
@@ -84,12 +81,12 @@ struct PostImagesGrid: View {
             .resizable()
             .scaledToFill()
             .frame(height: 178)
-        
     }
     
     var body: some View {
         imagesGrid
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .cornerRadius(8)
     }
 }
 
@@ -108,45 +105,38 @@ struct TwoImagesGrid: View {
                     .scaledToFit()
             }
         }
-        .cornerRadius(8)
     }
 }
 
 struct ThreeImageGrid: View {
     
     let images: [String]
-    let rows: [GridItem] = Array(repeating: .init(.flexible(minimum: 100, maximum: 170),
-                                                  spacing: 20,
-                                                  alignment: .center), count: 2)
-    
+    let rows: [GridItem] = Array(repeating: .init(.fixed(170),
+                                                  spacing: 10,
+                                                  alignment: .center),
+                                 count: 2)
     var body: some View {
-        GeometryReader {
-            let size = $0.size
-            HStack(alignment: .center, spacing: 0) {
+        GeometryReader { _ in
+            HStack(alignment: .top, spacing: 3) {
                 Image(images.first!)
                     .scaledToFill()
-                    .frame(width: size.width / 2)
                     .clipped()
-                    
-                LazyHGrid(rows: rows, alignment: .top, spacing: 3) {
+                
+                LazyHGrid(rows: rows, alignment: .center, spacing: 0) {
                     ForEach(images.dropFirst(), id: \.self) { image in
                         Image(image)
-                            .scaledToFill()
-                            .frame(width: size.width / 2)
+                            .scaledToFit()
                             .clipped()
-                            
                     }
                 }
             }
-            .cornerRadius(8)
         }
         .frame(height: 343)
-       
     }
 }
 
 struct ImageGallaryGrid: View {
-     
+    
     let images: [String]
     let rows: [GridItem] = Array(repeating: .init(.fixed(170),
                                                   spacing: 3,
@@ -176,21 +166,19 @@ struct ImageGallaryGrid: View {
                     }
             }
         }
-        .cornerRadius(8)
     }
 }
 
-struct PostView: View {
-    
-    let post: Post
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Group {
-                PostHeader(user: post.user)
-                PostBody(postType: post.body)
-            }.padding(.horizontal, 16)
+struct PostBody_Previews: PreviewProvider {
+    static var previews: some View {
+        let text = "Craving something delicious? Try our new dish - a savory mix of roasted vegetables and quinoa, topped with a zesty garlic. Yum!"
+        VStack {
+            PostBody(postType: .text(text))
+            
             AppDivider()
+            
+            PostBody(postType: .textWithImages(text, ["foodImage1"]))
         }
+        .padding(.horizontal, 16)
     }
 }
