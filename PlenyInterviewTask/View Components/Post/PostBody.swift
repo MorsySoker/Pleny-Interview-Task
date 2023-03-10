@@ -59,7 +59,9 @@ struct TextWithImagesTypePost: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             TextTypePost(text: text)
-            PostImagesGrid(images: images)
+            if !images.isEmpty {
+                PostImagesGrid(images: images)
+            }
         }
     }
 }
@@ -71,7 +73,7 @@ struct PostImagesGrid: View {
     private var imagesGrid: some View {
         switch images.count {
         case 1: oneImage
-        case 2: Color.titleColor
+        case 2: TwoImagesGrid(images: images)
         case 3: Color.appGrayBoarders
         default: Color.appDarkGray
         }
@@ -82,12 +84,31 @@ struct PostImagesGrid: View {
             .resizable()
             .scaledToFill()
             .frame(height: 178)
-            
+        
     }
     
     var body: some View {
         imagesGrid
             .frame(maxWidth: .infinity)
+    }
+}
+
+struct TwoImagesGrid: View {
+    
+    let images: [String]
+    var rows: [GridItem] =
+    Array(repeating: .init(.adaptive(minimum: 170), spacing: 3, alignment: .center), count: 2)
+    
+    var body: some View {
+        LazyVGrid(columns: rows, alignment: .center, spacing: 3) {
+            ForEach(images, id: \.self) {
+                Image($0)
+                    .resizable()
+                    .frame(height: 178)
+                    .scaledToFit()
+            }
+        }
+        .cornerRadius(8)
     }
 }
 
