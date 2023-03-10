@@ -20,12 +20,14 @@ struct FeedView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 
             }
+            // pull to refresh
+            .refreshable {
+                
+            }
             .onTapGesture {
                 dismissKeyboard()
             }
-            
         }
-        .frame(maxHeight: .infinity, alignment: .top)
     }
 }
 

@@ -16,4 +16,5 @@ extension Color {
     static let appDivider = Color("appDivider")
     static let appDarkGray = Color("appDarkGray")
     static let titleColor = Color("titleColor")
+    static let postDateColor = Color("postDateColor")
 }

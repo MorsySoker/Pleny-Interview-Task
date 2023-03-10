@@ -18,7 +18,7 @@ struct User: Identifiable, Codable {
      
      - Parameter id: an id can be a uuid, fcm or any generic id.
      - Parameter name: display name.
-     - Parameter avatar: avatar url.
+     - Parameter avatar: user avatar it could be stringUrl, or static image .
      
      A user may or may not have an avatar.
      
