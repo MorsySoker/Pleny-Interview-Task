@@ -10,28 +10,24 @@ import SwiftUI
 struct FeedView: View {
     
     //MARK: - View States
-    @State private var searchText: String = ""
-    @State var post: Array<Post> = []
+    @Binding var searchText: String
+    @Binding var post: Array<Post>
     
     //MARK: - Views
     var body: some View {
-        VStack(alignment: .center, spacing: 16) {
-            FeedNav(searchText: $searchText)
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .center, spacing: 12) {
-                    ForEach(post) { post in
-                        PostView(post: post)
-                    }
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(alignment: .center, spacing: 12) {
+                ForEach(post) { post in
+                    PostView(post: post)
                 }
             }
-            // pull to refresh
-            .refreshable {
-                
-            }
-            .onTapGesture {
-                dismissKeyboard()
-            }
+        }
+        // pull to refresh
+        .refreshable {
+            
+        }
+        .onTapGesture {
+            dismissKeyboard()
         }
     }
 }
@@ -50,6 +46,7 @@ struct FeedView_Previews: PreviewProvider {
         let post3 = Post(id: 3,
                          body: .textWithImages(text, ["foodImage4", "foodImage2", "foodImage3"]),
                          sender: User(id: 2, name: "Neama Ahmed", avatar: "femalePic"))
-        FeedView(post: [post3, post2, post1])
+        FeedView(searchText: .constant(""),
+                 post: .constant([post2]))
     }
 }

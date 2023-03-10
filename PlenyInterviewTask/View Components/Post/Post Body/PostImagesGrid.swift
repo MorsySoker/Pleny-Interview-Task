@@ -90,15 +90,16 @@ struct ImageGallaryGrid: View {
             ForEach(images.prefix(images.count > 4 ? 3 : 4), id: \.self) { image in
                 Image(image)
                     .resizable()
-                    .frame(width: 170)
+                    .frame(width: 180)
                     .clipped()
             }
             
             if images.count > 4 {
                 Image(images[4])
                     .resizable()
-                    .frame(width: 170)
+                    .frame(width: 180)
                     .clipped()
+                    .scaledToFit()
                     .overlay(alignment: .center) {
                         Color.textColor
                             .opacity(0.7)
@@ -110,5 +111,6 @@ struct ImageGallaryGrid: View {
                     }
             }
         }
+        .frame(height: 343)
     }
 }

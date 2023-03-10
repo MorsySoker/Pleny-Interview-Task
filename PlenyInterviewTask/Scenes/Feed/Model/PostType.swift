@@ -9,7 +9,8 @@ import Foundation
 
 /// A type container associated with post body.
 enum PostType: Codable {
-    case text(_ text: String)
+    case text(text: String)
     case images(_ imagesURL: [String])
     case textWithImages(_ text: String, _ imagesURL: [String])
+    
 }

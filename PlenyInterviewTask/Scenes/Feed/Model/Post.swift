@@ -41,5 +41,6 @@ struct Post: Identifiable, Codable {
         case body = "body"
         case user = "user"
         case createAt = "createAt"
+        
     }
 }

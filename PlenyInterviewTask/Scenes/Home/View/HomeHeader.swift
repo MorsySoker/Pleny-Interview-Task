@@ -1,5 +1,5 @@
 //
-//  FeedNav.swift
+//  HomeHeader.swift
 //  PlenyInterviewTask
 //
 //  Created by Morsy Mohamed Elsokary on 09/03/2023.
@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct FeedNav: View {
+struct HomeHeader: View {
     
     //MARK: - View States
     @Binding var searchText: String
     @State private var animateLogo: Bool = false
     @State private var showSearchBar: Bool = false
     @State private var logoWidth: CGFloat = 60
+    
     //MARK: - Views
     private var logo: some View {
         Image("appLogo")

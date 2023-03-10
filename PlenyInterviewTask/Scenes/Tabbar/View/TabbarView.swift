@@ -10,13 +10,13 @@ import SwiftUI
 struct TabbarView: View {
     
     //MARK: - View States
-    @State private var selectedTab: Tab = .feed
+    @State private var selectedTab: Tab = .home
     
     //MARK: - Views
     @ViewBuilder
     private var page: some View {
         switch selectedTab {
-        case .feed: FeedView()
+        case .home: HomeView()
         case .offers: Color.clear
         case .market: Color.clear
         case .gallary: Color.clear
