@@ -11,14 +11,19 @@ struct FeedView: View {
     
     //MARK: - View States
     @State private var searchText: String = ""
+    @State var post: Array<Post> = []
     
     //MARK: - Views
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
+        VStack(alignment: .center, spacing: 16) {
             FeedNav(searchText: $searchText)
             
             ScrollView(.vertical, showsIndicators: false) {
-                
+                VStack(alignment: .center, spacing: 12) {
+                    ForEach(post) { post in
+                        PostView(post: post)
+                    }
+                }
             }
             // pull to refresh
             .refreshable {
@@ -31,8 +36,16 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
+struct FeedView_Previews: PreviewProvider {    
     static var previews: some View {
-        FeedView()
+        let text = "Craving something delicious? Try our new dish - a savory mix of roasted vegetables and quinoa, topped with a zesty garlic. Yum!"
+        let post1 = Post(id: 1,
+                         body: .textWithImages(text, ["foodImage1"]),
+                         sender: User(id: 1, name: "Morsy Mohamed", avatar: "malePic"))
+        
+        let post2 = Post(id: 2,
+                         body: .textWithImages(text, ["foodImage1", ""]),
+                         sender: User(id: 2, name: "Neama Ahmed", avatar: "femalePic"))
+        FeedView(post: [post1, post2])
     }
 }

@@ -14,7 +14,7 @@ struct Post: Identifiable, Codable {
     /// post type associated with its value.
     let body: PostType
     /// post creator
-    let sender: User
+    let user: User
     /// timestamp since 1970 in seconds.
     let createAt: Int
 
@@ -31,7 +31,7 @@ struct Post: Identifiable, Codable {
     init(id: Int, body: PostType, sender: User) {
         self.id = id
         self.body = body
-        self.sender = sender
+        self.user = sender
         self.createAt = Int(Date().timeIntervalSince1970)
     }
     
@@ -39,7 +39,7 @@ struct Post: Identifiable, Codable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case body = "body"
-        case sender = "sender"
+        case user = "user"
         case createAt = "createAt"
     }
 }
