@@ -75,7 +75,7 @@ struct PostImagesGrid: View {
         case 1: oneImage
         case 2: TwoImagesGrid(images: images)
         case 3: ThreeImageGrid(images: images)
-        default: Color.appDarkGray
+        default: ImageGallaryGrid(images: images)
         }
     }
     
@@ -142,6 +142,41 @@ struct ThreeImageGrid: View {
         }
         .frame(height: 343)
        
+    }
+}
+
+struct ImageGallaryGrid: View {
+     
+    let images: [String]
+    let rows: [GridItem] = Array(repeating: .init(.fixed(170),
+                                                  spacing: 3,
+                                                  alignment: .center), count: 2)
+    var body: some View {
+        LazyHGrid(rows: rows, alignment: .center, spacing: 3) {
+            ForEach(images.prefix(images.count > 4 ? 3 : 4), id: \.self) { image in
+                Image(image)
+                    .resizable()
+                    .frame(width: 170)
+                    .clipped()
+            }
+            
+            if images.count > 4 {
+                Image(images[4])
+                    .resizable()
+                    .frame(width: 170)
+                    .clipped()
+                    .overlay(alignment: .center) {
+                        Color.textColor
+                            .opacity(0.7)
+                            .overlay(alignment: .center) {
+                                Text("+\(images.count - 4)")
+                                    .font(.sfBold(of: 20))
+                                    .foregroundColor(.white)
+                            }
+                    }
+            }
+        }
+        .cornerRadius(8)
     }
 }
 
