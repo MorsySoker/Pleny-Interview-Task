@@ -32,7 +32,7 @@ struct PostBody_Previews: PreviewProvider {
     static var previews: some View {
         let text = "Craving something delicious? Try our new dish - a savory mix of roasted vegetables and quinoa, topped with a zesty garlic. Yum!"
         VStack {
-            PostBody(postType: .text(text))
+            PostBody(postType: .text(body: text))
             
             AppDivider()
             
