@@ -14,7 +14,7 @@ struct PostHeader: View {
 
     private var avatar: some View {
         
-        Image(user.avatar!)
+        Image(user.avatar)
             .resizable()
             .scaledToFill()
             .frame(width: 40, height: 40)
@@ -46,8 +46,7 @@ struct PostHeader_Previews: PreviewProvider {
     static var previews: some View {
         PostHeader(user: .init(id: 1,
                                firstName: "Morsy",
-                               maidenName: "Elsokary",
-                               avatar: "malePic"))
+                               maidenName: "Elsokary"))
         .padding(.horizontal, 16)
     }
 }

@@ -13,22 +13,22 @@ enum PostType: Codable {
     case images(_ imagesURL: [String])
     case textWithImages(_ text: String, _ imagesURL: [String])
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        var allKeys = ArraySlice(container.allKeys)
-        guard let onlyKey = allKeys.popFirst(), allKeys.isEmpty else {
-            throw DecodingError.typeMismatch(PostType.self, DecodingError.Context.init(codingPath: container.codingPath, debugDescription: "Invalid number of keys found, expected one.", underlyingError: nil))
+    static func randomType(body: String) -> PostType {
+        var images: [String] {
+            let images: [String] = ["foodImage1", "foodImage2", "foodImage3", "foodImage4", "foodImage5",
+                                    "foodImage6", "foodImage7", "foodImage9", "foodImage10"]
+            var arrayOfImages: [String] = []
+            for _ in 0...(Int.random(in: 0...6))  {
+                arrayOfImages.append(images.randomElement()!)
+            }
+            
+            return arrayOfImages
         }
-        switch onlyKey {
-        case .text:
-            let nestedContainer = try container.nestedContainer(keyedBy: PostType.TextCodingKeys.self, forKey: .text)
-            self = PostType.text(body: try nestedContainer.decode(String.self, forKey: PostType.TextCodingKeys.body))
-        case .images:
-            let nestedContainer = try container.nestedContainer(keyedBy: PostType.ImagesCodingKeys.self, forKey: .images)
-            self = PostType.images(try nestedContainer.decode([String].self, forKey: PostType.ImagesCodingKeys._0))
-        case .textWithImages:
-            let nestedContainer = try container.nestedContainer(keyedBy: PostType.TextWithImagesCodingKeys.self, forKey: .textWithImages)
-            self = PostType.textWithImages(try nestedContainer.decode(String.self, forKey: PostType.TextWithImagesCodingKeys._0), try nestedContainer.decode([String].self, forKey: PostType.TextWithImagesCodingKeys._1))
-        }
+        let types: [PostType] = [.text(body: body),
+                                 .textWithImages(body, images),
+                                 .textWithImages(body, images),
+                                 .textWithImages(body, images)]
+        
+       return types.randomElement()!
     }
 }

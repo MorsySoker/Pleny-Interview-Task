@@ -25,7 +25,6 @@ final class HomeViewModel: BaseObservableViewModel {
 }
 
 extension HomeViewModel {
-    
     func getPosts() {
         postService.getPosts(with: 10, skip: 0)
             .flatMap(convertFeedResponseToPosts)
@@ -60,7 +59,9 @@ extension HomeViewModel {
             userPub
                 .sink(receiveCompletion: self.onReceive) { user in
                     let post = posts.first(where: { $0.userID! == user.id })!
-                    self.posts.append(Post(id: post.id!, body: .text(body: post.body!), sender: user))
+                    self.posts.append(Post(id: post.id!,
+                                           body: PostType.randomType(body: post.body!),
+                                           sender: user))
                 }
                 .store(in: &self.cancellables)
         }
