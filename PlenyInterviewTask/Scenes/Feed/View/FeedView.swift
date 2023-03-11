@@ -17,6 +17,7 @@ struct FeedView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 12) {
+                
                 ForEach(post) { post in
                     PostView(post: post)
                 }
