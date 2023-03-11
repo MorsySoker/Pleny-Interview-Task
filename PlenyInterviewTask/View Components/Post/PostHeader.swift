@@ -45,7 +45,8 @@ struct PostHeader: View {
 struct PostHeader_Previews: PreviewProvider {
     static var previews: some View {
         PostHeader(user: .init(id: 1,
-                               name: "Morsy Mohamed Morsy",
+                               firstName: "Morsy",
+                               maidenName: "Elsokary",
                                avatar: "malePic"))
         .padding(.horizontal, 16)
     }

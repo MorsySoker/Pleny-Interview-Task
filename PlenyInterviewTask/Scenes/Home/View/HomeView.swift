@@ -12,19 +12,21 @@ struct HomeView: View {
     //MARK: - View States
     @StateObject private var viewModel: HomeViewModel
     @State private var searchText: String = ""
-    @State var post: Array<Post> = []
     
     //MARK: - Views
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
             HomeHeader(searchText: $searchText)
-            FeedView(searchText: $searchText, post: $post)
+            FeedView(searchText: $searchText, post: $viewModel.posts)
         }
     }
     
     //MARK: - init
     init(requestable: Requestable = NetworkRequestable()) {
-        _viewModel = StateObject(wrappedValue: HomeViewModel(postService: PostService(networkService: requestable)))
+        _viewModel = StateObject(
+            wrappedValue:
+                HomeViewModel(postService: PostService(networkService: requestable),
+                              userService: UserService(networkService: requestable)))
     }
 }
 

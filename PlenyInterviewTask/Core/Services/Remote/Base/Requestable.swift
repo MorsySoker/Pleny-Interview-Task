@@ -54,9 +54,9 @@ public final class NetworkRequestable: Requestable {
                 if requestMetaData.statusCode == 401 {
                     throw NetworkError.unauthorized(code: 401, error: "Unauthorized Need Token")
                 }
-                
-                print(" 🏃🏼‍♀️ \(output.response)")
-                print(" 🐤 \(output.data)")
+//                
+//                print(" 🏃🏼‍♀️ \(output.response)")
+//                print(" 🐤 \(output.data)")
                 return output.data
             }
             .receive(on: RunLoop.main)

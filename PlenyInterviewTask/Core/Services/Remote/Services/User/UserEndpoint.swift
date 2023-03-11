@@ -12,10 +12,11 @@ enum UserEndpoint: RequestEndpoint {
 case getUser(withId: Int)
     
     var parameters: Parameters? {
-        switch self {
-        case .getUser:
-            return ["select": ["firstName", "maidenName"]]
-        }
+//        switch self {
+//        case .getUser:
+//            return ["select": ["firstName", "maidenName"]]
+//        }
+        nil
     }
     
     var requestBody: Any? {
