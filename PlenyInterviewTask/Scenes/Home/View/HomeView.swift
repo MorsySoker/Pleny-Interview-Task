@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     //MARK: - View States
+    @StateObject private var viewModel: HomeViewModel
     @State private var searchText: String = ""
     @State var post: Array<Post> = []
     
@@ -19,6 +20,11 @@ struct HomeView: View {
             HomeHeader(searchText: $searchText)
             FeedView(searchText: $searchText, post: $post)
         }
+    }
+    
+    //MARK: - init
+    init(requestable: Requestable = NetworkRequestable()) {
+        _viewModel = StateObject(wrappedValue: HomeViewModel(postService: PostService(networkService: requestable)))
     }
 }
 

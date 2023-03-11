@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D8CF3FC29BBA0C60014FE21 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF3FB29BBA0C60014FE21 /* HomeViewModel.swift */; };
+		1D8CF3FF29BC43A30014FE21 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF3FE29BC43A30014FE21 /* UserEndpoint.swift */; };
+		1D8CF40129BC461B0014FE21 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF40029BC461B0014FE21 /* UserService.swift */; };
 		1D964AAF29B8D0CF008C1DEE /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AAE29B8D0CE008C1DEE /* SF-Pro-Display-Bold.otf */; };
 		1D964AB129B8D147008C1DEE /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB029B8D147008C1DEE /* SF-Pro-Display-Medium.otf */; };
 		1D964AB329B8D20F008C1DEE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB229B8D20F008C1DEE /* SF-Pro-Display-Regular.otf */; };
@@ -76,6 +79,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D8CF3FB29BBA0C60014FE21 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1D8CF3FE29BC43A30014FE21 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		1D8CF40029BC461B0014FE21 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1D964AAE29B8D0CE008C1DEE /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		1D964AB029B8D147008C1DEE /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		1D964AB229B8D20F008C1DEE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -157,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D8CF3FD29BC43920014FE21 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CF3FE29BC43A30014FE21 /* UserEndpoint.swift */,
+				1D8CF40029BC461B0014FE21 /* UserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		1D9FC05D29B7C276007610F8 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +331,7 @@
 		1D9FC09E29B7C9E5007610F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1D8CF3FD29BC43920014FE21 /* User */,
 				1DAA9D3129BB828C00176B5D /* Post */,
 				1D9FC13929B7D370007610F8 /* Auth */,
 			);
@@ -453,6 +469,7 @@
 		1DAA9D2E29BB7CBF00176B5D /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				1D8CF3FB29BBA0C60014FE21 /* HomeViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -637,6 +654,7 @@
 				1D9FC0E129B7C9E6007610F8 /* UIDevice+Extensions.swift in Sources */,
 				1D9FC0EC29B7C9E6007610F8 /* Enviroment.swift in Sources */,
 				1DB6FEC529B921E2001C1CE2 /* TabView.swift in Sources */,
+				1D8CF40129BC461B0014FE21 /* UserService.swift in Sources */,
 				1DB3237E29B9EF8E0093C7B6 /* User.swift in Sources */,
 				1DB6FEBB29B9190B001C1CE2 /* LoginFormView.swift in Sources */,
 				1DB3238429B9F5E20093C7B6 /* Feed.swift in Sources */,
@@ -654,7 +672,9 @@
 				1D9FC07C29B7C910007610F8 /* LoginView.swift in Sources */,
 				1DB3238029B9F1850093C7B6 /* Post.swift in Sources */,
 				1DAA9D2629BB7B0100176B5D /* ImagesTypePost.swift in Sources */,
+				1D8CF3FC29BBA0C60014FE21 /* HomeViewModel.swift in Sources */,
 				1D9FC0E329B7C9E6007610F8 /* Color+Apperance.swift in Sources */,
+				1D8CF3FF29BC43A30014FE21 /* UserEndpoint.swift in Sources */,
 				1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */,
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
 				1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */,

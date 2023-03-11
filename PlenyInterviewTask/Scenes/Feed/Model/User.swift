@@ -10,8 +10,12 @@ import Foundation
 struct User: Identifiable, Codable {
     
     let id: Int
-    let name: String
+    var name: String {
+        "\(firstName) \(maidenName)"
+    }
     let avatar: String?
+    let firstName: String
+    let maidenName: String
     
     /**
      Represents a user that is either a sender or a reciever.
@@ -24,16 +28,18 @@ struct User: Identifiable, Codable {
      
      - Returns: A user with the specified info
      */
-    init(id: Int, name: String, avatar: String?) {
+    init(id: Int, firstName: String, maidenName: String, avatar: String?) {
         self.id = id
-        self.name = name
+        self.firstName = firstName
+        self.maidenName = maidenName
         self.avatar = avatar
     }
     
     /// Keys for encoding and decoding data.
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case name = "name"
-        case avatar = "avatar"
+        case firstName = "firstName"
+        case maidenName = "maidenName"
+        case avatar = "image"
     }
 }
