@@ -10,11 +10,17 @@ import Foundation
 enum PostEndpoint: RequestEndpoint {
     
     case getPosts(limit: Int, skip: Int)
+    case searchPosts(searchInput: String, limit: Int, skip: Int)
     
     var parameters: Parameters? {
         switch self {
         case .getPosts(let limit, let skip):
             return ["limit" : limit,
+                    "skip" : skip]
+            
+        case .searchPosts(let searchInput, let limit, let skip):
+            return ["q" : searchInput,
+                    "limit" : limit,
                     "skip" : skip]
         }
     }
@@ -27,6 +33,8 @@ enum PostEndpoint: RequestEndpoint {
         switch self {
         case .getPosts:
             return "/posts"
+        case .searchPosts:
+            return "/posts/search"
         }
     }
     

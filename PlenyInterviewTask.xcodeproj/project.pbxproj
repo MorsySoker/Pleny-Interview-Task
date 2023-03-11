@@ -10,6 +10,7 @@
 		1D8CF3FC29BBA0C60014FE21 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF3FB29BBA0C60014FE21 /* HomeViewModel.swift */; };
 		1D8CF3FF29BC43A30014FE21 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF3FE29BC43A30014FE21 /* UserEndpoint.swift */; };
 		1D8CF40129BC461B0014FE21 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF40029BC461B0014FE21 /* UserService.swift */; };
+		1D8CF40329BD02650014FE21 /* PostResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CF40229BD02650014FE21 /* PostResponseModel.swift */; };
 		1D964AAF29B8D0CF008C1DEE /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AAE29B8D0CE008C1DEE /* SF-Pro-Display-Bold.otf */; };
 		1D964AB129B8D147008C1DEE /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB029B8D147008C1DEE /* SF-Pro-Display-Medium.otf */; };
 		1D964AB329B8D20F008C1DEE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D964AB229B8D20F008C1DEE /* SF-Pro-Display-Regular.otf */; };
@@ -82,6 +83,7 @@
 		1D8CF3FB29BBA0C60014FE21 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1D8CF3FE29BC43A30014FE21 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
 		1D8CF40029BC461B0014FE21 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1D8CF40229BD02650014FE21 /* PostResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponseModel.swift; sourceTree = "<group>"; };
 		1D964AAE29B8D0CE008C1DEE /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		1D964AB029B8D147008C1DEE /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		1D964AB229B8D20F008C1DEE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 			children = (
 				1DAA9D3229BB82C300176B5D /* PostEndpoint.swift */,
 				1DAA9D3429BB91DE00176B5D /* PostService.swift */,
+				1D8CF40229BD02650014FE21 /* PostResponseModel.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				1DAA9D2A29BB7B2F00176B5D /* PostImagesGrid.swift in Sources */,
 				1D9FC0E929B7C9E6007610F8 /* RequestService.swift in Sources */,
 				1DB6FEB829B908C1001C1CE2 /* LoadingIndicator.swift in Sources */,
+				1D8CF40329BD02650014FE21 /* PostResponseModel.swift in Sources */,
 				1D9FC11E29B7CAE1007610F8 /* BaseBackgroundView.swift in Sources */,
 				1D9FC07C29B7C910007610F8 /* LoginView.swift in Sources */,
 				1DB3238029B9F1850093C7B6 /* Post.swift in Sources */,

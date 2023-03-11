@@ -15,9 +15,9 @@ struct FeedView: View {
     //MARK: - Views
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 ForEach(viewModel.posts) { post in
-                    PostView(post: post)
+                    PostView(post: post, searchText: $viewModel.searchText)
                         .onAppear {
                             viewModel.loadMorePosts(currentPost: post)
                         }
@@ -26,7 +26,7 @@ struct FeedView: View {
         }
         .overlay(alignment: .center, content: {
             if viewModel.isLoading {
-                ProgressView()
+                LoadingIndicator(width: 40, height: 40, trimTo: 0.6, color: .textColor, lineWidth: 3)
             }
         })
         // pull to refresh

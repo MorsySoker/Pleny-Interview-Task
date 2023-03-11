@@ -11,10 +11,11 @@ struct TextWithImagesTypePost: View {
     
     let text: String
     let images: [String]
+    @Binding var searchText: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            TextTypePost(text: text)
+            TextTypePost(text: text, searchText: $searchText)
             if !images.isEmpty {
                 PostImagesGrid(images: images)
             }
