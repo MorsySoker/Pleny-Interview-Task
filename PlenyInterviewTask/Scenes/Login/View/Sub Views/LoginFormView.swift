@@ -15,6 +15,10 @@ struct LoginFormView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 40) {
+            NavigationLink(destination: TabbarView(),
+                           isActive: $viewModel.isLoggedIn,
+                           label: {}).labelsHidden()
+            
             VStack(alignment: .leading, spacing: 24) {
                 FieldSection(sectionTitle: "User Name",
                              placerHolder: "Enter your user name",

@@ -11,7 +11,7 @@ struct TextTypePost: View {
     let text: String
     @Binding var searchText: String
     var body: some View {
-        hilightedText(text: text, searched: searchText)
+        hilightedText(text: text, searched: searchText.lowercased())
             .autocorrectionDisabled()
             .textInputAutocapitalization(.never)
             .multilineTextAlignment(.leading)

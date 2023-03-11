@@ -13,6 +13,7 @@ final class LoginViewModel: BaseObservableViewModel {
     @Published var user: LoggedUser?
     @Published var auth: AuthModel = AuthModel(userName: "", password: "")
     @Published var isValidToAuth: Bool = false
+    @Published var isLoggedIn: Bool = false
     
     //Services
     private let authService: AuthServiceProtocol
@@ -50,5 +51,6 @@ extension LoginViewModel {
         }
         self.isLoading = false
         print("\(id) \(token)")
+        self.isLoggedIn = true
     }
 }

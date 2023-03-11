@@ -18,6 +18,10 @@ struct HomeView: View {
             HomeHeader(searchText: $viewModel.searchText)
             FeedView(viewModel: viewModel)
         }
+        .hideNavBar()
+        .onAppear {
+            viewModel.loadPosts()
+        }
     }
     
     //MARK: - init

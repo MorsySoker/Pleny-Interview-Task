@@ -12,6 +12,7 @@ final class HomeViewModel: BaseObservableViewModel {
     
     @Published var posts: Array<Post> = []
     @Published var searchText: String = ""
+    @Published var depouncedSearchText: String = ""
     // handling infinty scrolling
     @Published var currentPage: Int = 0
     
@@ -23,11 +24,34 @@ final class HomeViewModel: BaseObservableViewModel {
         self.postService = postService
         self.userService = userService
         super.init()
-        self.loadPosts()
+        self.depounceSearchText(for: 1)
+    }
+}
+ 
+extension HomeViewModel {
+    private func depounceSearchText(for sec: Int) {
+        $searchText
+            .debounce(for: .seconds(sec), scheduler: RunLoop.main)
+            .sink { searchText in
+                self.resetPagination()
+                self.loadSearchedPosts()
+            }
+            .store(in: &cancellables)
     }
 }
 
 extension HomeViewModel {
+    func loadSearchedPosts() {
+        guard !self.isLoading, !searchText.isEmpty else { return }
+        self.isLoading = true
+        
+        postService.getSearchedPosts(with: searchText, limit: 10, skip: currentPage)
+            .handleEvents(receiveOutput: handelRecivedOutput)
+            .flatMap(convertFeedResponseToPosts)
+            .sink(receiveCompletion: onReceive, receiveValue: onReceive)
+            .store(in: &cancellables)
+    }
+    
     func loadPosts() {
         guard !self.isLoading else { return }
         self.isLoading = true
@@ -40,15 +64,15 @@ extension HomeViewModel {
     
     func loadMorePosts(currentPost post: Post?) {
         guard let post else {
-            loadPosts()
+            searchText.isEmpty ? loadPosts() : loadSearchedPosts()
             return
         }
         
-        let thresholdIndex = posts.index(posts.endIndex, offsetBy: posts.count <= 5 ? 0 : -5)
+        let thresholdIndex = posts.index(posts.endIndex, offsetBy: posts.count <= 5 ? 0 : -2)
         print("PostsCount: \(posts.count) index: \(thresholdIndex)")
         
         if posts.firstIndex(where: { $0.id == post.id }) == thresholdIndex {
-            loadPosts()
+            searchText.isEmpty ? loadPosts() : loadSearchedPosts()
          }
     }
     

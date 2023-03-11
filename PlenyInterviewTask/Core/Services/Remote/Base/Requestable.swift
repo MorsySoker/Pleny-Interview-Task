@@ -62,7 +62,7 @@ public final class NetworkRequestable: Requestable {
             .receive(on: RunLoop.main)
             .decode(type: T.self, decoder: decoder)
             .mapError { self.errorHandling($0) }
-//            .print()
+            .print()
             .eraseToAnyPublisher()
     }
     
