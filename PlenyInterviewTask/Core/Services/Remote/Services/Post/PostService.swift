@@ -24,8 +24,8 @@ struct FeedResponse: Codable {
 }
 
 // MARK: - Post
-struct PostResponse: Codable {
-    var id: Int?
+struct PostResponse: Codable, Equatable {
+    var id: Int
     var body: String?
     var userID: Int?
 

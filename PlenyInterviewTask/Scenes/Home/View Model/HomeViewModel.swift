@@ -12,6 +12,9 @@ final class HomeViewModel: BaseObservableViewModel {
     
     @Published var posts: Array<Post> = []
     
+    // handling infinty scrolling
+    @Published var currentPage: Int = 0
+    
     private let postService: PostServiceProtocol
     private let userService: UserServiceProtocol
     
@@ -26,13 +29,37 @@ final class HomeViewModel: BaseObservableViewModel {
 
 extension HomeViewModel {
     func getPosts() {
-        postService.getPosts(with: 10, skip: 0)
+        guard !self.isLoading else { return }
+        self.isLoading = true
+        postService.getPosts(with: 10, skip: currentPage)
+            .handleEvents(receiveOutput: handelRecivedOutput)
             .flatMap(convertFeedResponseToPosts)
             .sink(receiveCompletion: onReceive, receiveValue: onReceive)
             .store(in: &cancellables)
     }
+    
+    func loadMorePosts(currentPost post: Post?) {
+        guard let post else {
+            getPosts()
+            return
+        }
+        
+        let thresholdIndex = posts.index(posts.endIndex, offsetBy: posts.count <= 5 ? 0 : -5)
+        print("PostsCount: \(posts.count) index: \(thresholdIndex)")
+        
+        if posts.firstIndex(where: { $0.id == post.id }) == thresholdIndex {
+            getPosts()
+         }
+    }
 }
+
+
 extension HomeViewModel {
+    
+    private func handelRecivedOutput(_ response: FeedResponse) {
+        self.currentPage += 10
+        self.isLoading = false
+    }
     
     private func convertFeedResponseToPosts(_ response: FeedResponse) -> AnyPublisher<([AnyPublisher<User, NetworkError>], [PostResponse]), NetworkError> {
 
@@ -47,6 +74,7 @@ extension HomeViewModel {
         }
 
         return Just((users, posts))
+//            .removeDuplicates(by: { $0.1 == $1.1 })
             .setFailureType(to: NetworkError.self)
             .eraseToAnyPublisher()
     }
@@ -59,12 +87,13 @@ extension HomeViewModel {
             userPub
                 .sink(receiveCompletion: self.onReceive) { user in
                     let post = posts.first(where: { $0.userID! == user.id })!
-                    self.posts.append(Post(id: post.id!,
+                    self.posts.append(Post(id: post.id,
                                            body: PostType.randomType(body: post.body!),
                                            sender: user))
                 }
                 .store(in: &self.cancellables)
         }
+        
     }
     
     // second way is to get the feed directily
@@ -74,12 +103,12 @@ extension HomeViewModel {
         guard let posts = response.posts else {
             return Fail(error: NetworkError.invalidJSON("")).eraseToAnyPublisher()
         }
-        var newPosts: Array<Post> = []
+        let newPosts: Array<Post> = []
         
         posts.forEach { [weak self] post in
             self?.userService.getUser(withId: post.userID!)
                 .sink(receiveCompletion: onReceive, receiveValue: { [weak self] user in
-                    self?.posts.append(Post(id: post.id!, body: .text(body: post.body!), sender: user))
+                    self?.posts.append(Post(id: post.id, body: .text(body: post.body!), sender: user))
                 })
                 .store(in: &cancellables)
         }
@@ -89,7 +118,7 @@ extension HomeViewModel {
     }
     
     private func onReceive(_ response: Feed) {
+        self.isLoading = false
         self.posts = response.posts
     }
-    
 }

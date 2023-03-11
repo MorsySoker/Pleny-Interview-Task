@@ -17,7 +17,8 @@ struct HomeView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
             HomeHeader(searchText: $searchText)
-            FeedView(searchText: $searchText, post: $viewModel.posts)
+            FeedView(searchText: $searchText,
+                     viewModel: viewModel)
         }
     }
     
