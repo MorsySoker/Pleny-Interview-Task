@@ -11,7 +11,7 @@ import Combine
 final class HomeViewModel: BaseObservableViewModel {
     
     @Published var posts: Array<Post> = []
-    
+    @Published var searchText: String = ""
     // handling infinty scrolling
     @Published var currentPage: Int = 0
     
@@ -23,12 +23,12 @@ final class HomeViewModel: BaseObservableViewModel {
         self.postService = postService
         self.userService = userService
         super.init()
-        self.getPosts()
+        self.loadPosts()
     }
 }
 
 extension HomeViewModel {
-    func getPosts() {
+    func loadPosts() {
         guard !self.isLoading else { return }
         self.isLoading = true
         postService.getPosts(with: 10, skip: currentPage)
@@ -40,7 +40,7 @@ extension HomeViewModel {
     
     func loadMorePosts(currentPost post: Post?) {
         guard let post else {
-            getPosts()
+            loadPosts()
             return
         }
         
@@ -48,8 +48,13 @@ extension HomeViewModel {
         print("PostsCount: \(posts.count) index: \(thresholdIndex)")
         
         if posts.firstIndex(where: { $0.id == post.id }) == thresholdIndex {
-            getPosts()
+            loadPosts()
          }
+    }
+    
+    func resetPagination() {
+        self.currentPage = 0
+        self.posts = []
     }
 }
 
@@ -74,7 +79,7 @@ extension HomeViewModel {
         }
 
         return Just((users, posts))
-//            .removeDuplicates(by: { $0.1 == $1.1 })
+            .removeDuplicates(by: { $0.1 == $1.1 })
             .setFailureType(to: NetworkError.self)
             .eraseToAnyPublisher()
     }

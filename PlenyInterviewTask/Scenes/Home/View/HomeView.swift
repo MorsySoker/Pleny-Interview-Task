@@ -11,14 +11,12 @@ struct HomeView: View {
     
     //MARK: - View States
     @StateObject private var viewModel: HomeViewModel
-    @State private var searchText: String = ""
     
     //MARK: - Views
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
-            HomeHeader(searchText: $searchText)
-            FeedView(searchText: $searchText,
-                     viewModel: viewModel)
+            HomeHeader(searchText: $viewModel.searchText)
+            FeedView(viewModel: viewModel)
         }
     }
     
