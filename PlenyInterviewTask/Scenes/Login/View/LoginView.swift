@@ -41,6 +41,10 @@ struct LoginView: View {
             }
         }
         .ignoresSafeArea()
+        .showErrorToast(isPresented: $viewModel.showsError,
+                        errorMsg: viewModel.errorMessage)
+        .showConnectonToast(isPresented: $viewModel.showConnectionError,
+                            errorMsg: viewModel.connectionMessage)
         .onChange(of: viewModel.isLoggedIn) { isLoggedIn in
             guard isLoggedIn else { return }
             appRoot.isLoggedin = isLoggedIn

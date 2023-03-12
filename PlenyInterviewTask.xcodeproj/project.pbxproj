@@ -78,6 +78,9 @@
 		1DB6FEC529B921E2001C1CE2 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC429B921E2001C1CE2 /* TabView.swift */; };
 		1DB6FEC729B925BA001C1CE2 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */; };
 		1DB8A2BF29BDB57E00551366 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2BE29BDB57E00551366 /* AppRoot.swift */; };
+		1DB8A2C229BDC8D600551366 /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 1DB8A2C129BDC8D600551366 /* SSToastMessage */; };
+		1DB8A2C629BDC90900551366 /* ErrorToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2C429BDC90900551366 /* ErrorToastView.swift */; };
+		1DB8A2C729BDC90900551366 /* ConnectionToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2C529BDC90900551366 /* ConnectionToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +157,8 @@
 		1DB6FEC429B921E2001C1CE2 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		1DB8A2BE29BDB57E00551366 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
+		1DB8A2C429BDC90900551366 /* ErrorToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorToastView.swift; sourceTree = "<group>"; };
+		1DB8A2C529BDC90900551366 /* ConnectionToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB8A2C229BDC8D600551366 /* SSToastMessage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +352,7 @@
 		1D9FC11A29B7CAAE007610F8 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				1DB8A2C329BDC90900551366 /* Toasts */,
 				1DAA9D1929BB4DEF00176B5D /* Post */,
 				1DB6FEAC29B90282001C1CE2 /* TextFieldComponent */,
 				1DB6FEB729B908C1001C1CE2 /* LoadingIndicator.swift */,
@@ -558,6 +565,15 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		1DB8A2C329BDC90900551366 /* Toasts */ = {
+			isa = PBXGroup;
+			children = (
+				1DB8A2C429BDC90900551366 /* ErrorToastView.swift */,
+				1DB8A2C529BDC90900551366 /* ConnectionToastView.swift */,
+			);
+			path = Toasts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -574,6 +590,9 @@
 			dependencies = (
 			);
 			name = PlenyInterviewTask;
+			packageProductDependencies = (
+				1DB8A2C129BDC8D600551366 /* SSToastMessage */,
+			);
 			productName = PlenyInterviewTask;
 			productReference = 1D9FC06629B7C277007610F8 /* PlenyInterviewTask.app */;
 			productType = "com.apple.product-type.application";
@@ -602,6 +621,9 @@
 				Base,
 			);
 			mainGroup = 1D9FC05D29B7C276007610F8;
+			packageReferences = (
+				1DB8A2C029BDC8D600551366 /* XCRemoteSwiftPackageReference "SSToastMessage" */,
+			);
 			productRefGroup = 1D9FC06729B7C277007610F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -634,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB8A2C729BDC90900551366 /* ConnectionToastView.swift in Sources */,
 				1DAA9D2829BB7B1900176B5D /* TextWithImagesTypePost.swift in Sources */,
 				1DAA9D1429B994FF00176B5D /* FeedView.swift in Sources */,
 				1D9FC0ED29B7C9E6007610F8 /* Base.swift in Sources */,
@@ -665,6 +688,7 @@
 				1DB6FEBB29B9190B001C1CE2 /* LoginFormView.swift in Sources */,
 				1DB3238429B9F5E20093C7B6 /* Feed.swift in Sources */,
 				1DB6FEBD29B91930001C1CE2 /* FieldSection.swift in Sources */,
+				1DB8A2C629BDC90900551366 /* ErrorToastView.swift in Sources */,
 				1DAA9D3029BB7CCF00176B5D /* HomeView.swift in Sources */,
 				1DB6FEB629B9085D001C1CE2 /* AppActionButton.swift in Sources */,
 				1D9FC0F129B7C9E6007610F8 /* Endpoint.swift in Sources */,
@@ -913,6 +937,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DB8A2C029BDC8D600551366 /* XCRemoteSwiftPackageReference "SSToastMessage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimformSolutionsPvtLtd/SSToastMessage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DB8A2C129BDC8D600551366 /* SSToastMessage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DB8A2C029BDC8D600551366 /* XCRemoteSwiftPackageReference "SSToastMessage" */;
+			productName = SSToastMessage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D9FC05E29B7C276007610F8 /* Project object */;
 }
