@@ -16,7 +16,7 @@ struct ErrorToastView: View {
         VStack(alignment: .leading) {
             Spacer()
             HStack(spacing: 12) {
-                Image("errorIcon")
+                Image(systemName: "xmark")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 18.28)

@@ -11,7 +11,7 @@ final class LoginViewModel: BaseObservableViewModel {
     
     //MARK: - Properties
     @Published var user: LoggedUser?
-    @Published var auth: AuthModel = AuthModel(userName: "", password: "")
+    @Published var auth: AuthModel = AuthModel(userName: "atuny0", password: "9uQFF1Lh")
     @Published var isValidToAuth: Bool = false
     @Published var isLoggedIn: Bool = false
     

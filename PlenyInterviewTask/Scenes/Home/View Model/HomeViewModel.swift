@@ -31,6 +31,7 @@ final class HomeViewModel: BaseObservableViewModel {
 extension HomeViewModel {
     private func depounceSearchText(for sec: Int) {
         $searchText
+            .drop(while: { $0.isEmpty })
             .debounce(for: .seconds(sec), scheduler: RunLoop.main)
             .sink { searchText in
                 self.resetPagination()
@@ -64,7 +65,7 @@ extension HomeViewModel {
     
     func loadMorePosts(currentPost post: Post?) {
         guard let post else {
-            searchText.isEmpty ? loadPosts() : loadSearchedPosts()
+//            searchText.isEmpty ? loadPosts() : loadSearchedPosts()
             return
         }
         
