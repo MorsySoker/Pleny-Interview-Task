@@ -81,6 +81,8 @@
 		1DB8A2C229BDC8D600551366 /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 1DB8A2C129BDC8D600551366 /* SSToastMessage */; };
 		1DB8A2C629BDC90900551366 /* ErrorToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2C429BDC90900551366 /* ErrorToastView.swift */; };
 		1DB8A2C729BDC90900551366 /* ConnectionToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2C529BDC90900551366 /* ConnectionToastView.swift */; };
+		1DB8A2CD29BE189800551366 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2CC29BE189800551366 /* UserDetailsModel.swift */; };
+		1DB8A2CF29BE197900551366 /* UserDetailsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2CE29BE197900551366 /* UserDetailsPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +161,8 @@
 		1DB8A2BE29BDB57E00551366 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
 		1DB8A2C429BDC90900551366 /* ErrorToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorToastView.swift; sourceTree = "<group>"; };
 		1DB8A2C529BDC90900551366 /* ConnectionToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionToastView.swift; sourceTree = "<group>"; };
+		1DB8A2CC29BE189800551366 /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
+		1DB8A2CE29BE197900551366 /* UserDetailsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +471,7 @@
 			children = (
 				1DB3237529B9D9C40093C7B6 /* HomeHeader.swift */,
 				1DAA9D2F29BB7CCF00176B5D /* HomeView.swift */,
+				1DB8A2CE29BE197900551366 /* UserDetailsPopupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8CF3FB29BBA0C60014FE21 /* HomeViewModel.swift */,
+				1DB8A2CC29BE189800551366 /* UserDetailsModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -677,6 +683,7 @@
 				1DB6FEC729B925BA001C1CE2 /* TabbarView.swift in Sources */,
 				1D9FC13D29B7D559007610F8 /* AuthModel.swift in Sources */,
 				1D9FC0DA29B7C9E6007610F8 /* BaseView.swift in Sources */,
+				1DB8A2CD29BE189800551366 /* UserDetailsModel.swift in Sources */,
 				1D9FC13F29B7D5D8007610F8 /* AuthService.swift in Sources */,
 				1DAA9D3329BB82C400176B5D /* PostEndpoint.swift in Sources */,
 				1D9FC0EB29B7C9E6007610F8 /* BaseResponce.swift in Sources */,
@@ -707,6 +714,7 @@
 				1D8CF3FC29BBA0C60014FE21 /* HomeViewModel.swift in Sources */,
 				1D9FC0E329B7C9E6007610F8 /* Color+Apperance.swift in Sources */,
 				1D8CF3FF29BC43A30014FE21 /* UserEndpoint.swift in Sources */,
+				1DB8A2CF29BE197900551366 /* UserDetailsPopupView.swift in Sources */,
 				1DB6FEB129B90282001C1CE2 /* TextFieldLabel.swift in Sources */,
 				1D9FC0EA29B7C9E6007610F8 /* NetworkErrors.swift in Sources */,
 				1DB3237329B9CE180093C7B6 /* SearchBar.swift in Sources */,

@@ -9,6 +9,7 @@ import Foundation
 
 struct User: Identifiable, Codable {
     
+    let animationId: String = UUID().uuidString
     let id: Int
     let firstName: String
     let maidenName: String

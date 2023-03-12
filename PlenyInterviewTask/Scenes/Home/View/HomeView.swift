@@ -11,17 +11,17 @@ struct HomeView: View {
     
     //MARK: - View States
     @StateObject private var viewModel: HomeViewModel
+    @StateObject private var userDetailsModel: UserDetailsModel = UserDetailsModel()
+    // animetion name space
+    @Namespace var animation
     
     //MARK: - Views
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
             HomeHeader(searchText: $viewModel.searchText)
-            FeedView(viewModel: viewModel)
-        }
-        .hideNavBar()
-        .onAppear {
-            viewModel.loadPosts()
-        }
+            FeedView(viewModel: viewModel, animation: animation)
+                .environmentObject(userDetailsModel)
+        }.hideNavBar()
     }
     
     //MARK: - init
