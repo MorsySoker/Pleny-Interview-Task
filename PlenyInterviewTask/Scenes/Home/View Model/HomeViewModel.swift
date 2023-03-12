@@ -24,6 +24,7 @@ final class HomeViewModel: BaseObservableViewModel {
         self.postService = postService
         self.userService = userService
         super.init()
+        self.loadPosts()
         self.depounceSearchText(for: 1)
     }
 }
@@ -79,6 +80,7 @@ extension HomeViewModel {
     
     func resetPagination() {
         self.currentPage = 0
+        
         self.posts = []
     }
 }

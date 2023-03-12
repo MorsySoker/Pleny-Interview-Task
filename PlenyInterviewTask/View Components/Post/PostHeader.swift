@@ -11,14 +11,25 @@ struct PostHeader: View {
     
     // user model
     let user: User
+    var animation: Namespace.ID
+    
+    @EnvironmentObject private var userDetailsModel: UserDetailsModel
 
     private var avatar: some View {
-        
-        Image(user.avatar)
-            .resizable()
-            .scaledToFill()
-            .frame(width: 40, height: 40)
-            .clipShape(Circle())
+        Button {
+            withAnimation {
+                userDetailsModel.selectedUser = user
+                userDetailsModel.showUserpic.toggle()
+            }
+        } label: {
+            Image(user.avatar)
+                .resizable()
+                .scaledToFill()
+                .matchedGeometryEffect(id: user.animationId, in: animation)
+                .frame(width: 40, height: 40)
+                .clipShape(Circle())
+        }
+        .buttonStyle(.plain)
     }
     
     private var info: some View {
@@ -39,14 +50,5 @@ struct PostHeader: View {
             info
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-    }
-}
-
-struct PostHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        PostHeader(user: .init(id: 1,
-                               firstName: "Morsy",
-                               maidenName: "Elsokary"))
-        .padding(.horizontal, 16)
     }
 }
