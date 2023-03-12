@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct PlenyInterviewTaskApp: App {
+    
+    @StateObject private var appRoot: AppRouter = AppRouter()
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            root
+                .environmentObject(appRoot)
+        }
+    }
+}
+
+extension PlenyInterviewTaskApp {
+     
+    @ViewBuilder
+    private var root: some View {
+        switch appRoot.currentRoot {
+        case .auth: LoginView()
+        case .tabbar: TabbarView()
         }
     }
 }

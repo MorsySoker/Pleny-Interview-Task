@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     // MARK: - View States
+    @EnvironmentObject private var appRoot: AppRouter
     @StateObject private var viewModel: LoginViewModel
     
     //MARK: - Views
@@ -40,6 +41,11 @@ struct LoginView: View {
             }
         }
         .ignoresSafeArea()
+        .onChange(of: viewModel.isLoggedIn) { isLoggedIn in
+            guard isLoggedIn else { return }
+            appRoot.isLoggedin = isLoggedIn
+            appRoot.route()
+        }
     }
     
     //MARK: - Body

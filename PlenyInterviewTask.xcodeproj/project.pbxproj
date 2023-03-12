@@ -77,6 +77,7 @@
 		1DB6FEC329B91EF1001C1CE2 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */; };
 		1DB6FEC529B921E2001C1CE2 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC429B921E2001C1CE2 /* TabView.swift */; };
 		1DB6FEC729B925BA001C1CE2 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */; };
+		1DB8A2BF29BDB57E00551366 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8A2BE29BDB57E00551366 /* AppRoot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		1DB6FEC229B91EF1001C1CE2 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		1DB6FEC429B921E2001C1CE2 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		1DB6FEC629B925BA001C1CE2 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		1DB8A2BE29BDB57E00551366 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				1D9FC06929B7C277007610F8 /* PlenyInterviewTaskApp.swift */,
+				1DB8A2BE29BDB57E00551366 /* AppRoot.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				1D9FC0DF29B7C9E6007610F8 /* ClosedRange+Extension.swift in Sources */,
 				1DAA9D2A29BB7B2F00176B5D /* PostImagesGrid.swift in Sources */,
 				1D9FC0E929B7C9E6007610F8 /* RequestService.swift in Sources */,
+				1DB8A2BF29BDB57E00551366 /* AppRoot.swift in Sources */,
 				1DB6FEB829B908C1001C1CE2 /* LoadingIndicator.swift in Sources */,
 				1D8CF40329BD02650014FE21 /* PostResponseModel.swift in Sources */,
 				1D9FC11E29B7CAE1007610F8 /* BaseBackgroundView.swift in Sources */,
