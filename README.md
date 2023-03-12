@@ -4,6 +4,13 @@
 ##### To Login use 
 Example for a User (UserName: "atuny0" / password: "9uQFF1Lh")
 
+## Deployment
+
+To run this project please make sure to update swift packages
+
+```bash
+  File -> Swift Packages -> Update to Latest Package Versions
+```
 
 ## Technology stack
 
@@ -19,6 +26,9 @@ Combine
 
 ## Design Pattern
 MVVM
+
+## Packages
+ssToast: to handel errors
 
 ## Roadmap to improve the app
 
